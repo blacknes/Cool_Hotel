@@ -1,6 +1,6 @@
-
+Test
 Hi: all
 
-this is test for origin
+this is master for origin
 
-here is clan_branch
+here is master branch
