@@ -1,64 +1,102 @@
 package nill.model;
 
 import java.util.Date;
+import java.util.HashSet;
+import java.util.Set;
+import java.util.UUID;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
+import javax.persistence.ManyToMany;
+import javax.persistence.Table;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
+import javax.persistence.Transient;
+
+import org.apache.commons.lang3.StringUtils;
+import org.hibernate.annotations.DynamicInsert;
+import org.hibernate.annotations.DynamicUpdate;
 
 /**
  * Tuser entity. @author MyEclipse Persistence Tools
  */
 
+@Entity
+@Table(name = "TUSER", schema = "")
+@DynamicInsert(true)
+@DynamicUpdate(true)
 public class Tuser implements java.io.Serializable {
-
-	// Fields
 
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
+
+	private String ip;// 此属性不存数据库，虚拟属性
+
 	private String id;
-	private String name;
-	private String pwd;
 	private Date createdatetime;
-	private Date modifydatetime;
+	private Date updatedatetime;
+	private String loginname;
+	private String pwd;
+	private String name;
+	private String sex;
+	private Integer age;
+	private String photo;
+	private Set<Torganization> torganizations = new HashSet<Torganization>(0);
+	private Set<Trole> troles = new HashSet<Trole>(0);
 
-	// Constructors
-
-	/** default constructor */
-	public Tuser() {
-	}
-
-	/** minimal constructor */
-	public Tuser(String id) {
-		this.id = id;
-	}
-
-	/** full constructor */
-	public Tuser(String id, String name, String pwd, Date createdatetime,
-			Date modifydatetime) {
-		this.id = id;
-		this.name = name;
-		this.pwd = pwd;
-		this.createdatetime = createdatetime;
-		this.modifydatetime = modifydatetime;
-	}
-
-	// Property accessors
-
+	@Id
+	@Column(name = "ID", unique = true, nullable = false, length = 36)
 	public String getId() {
-		return this.id;
+		if (!StringUtils.isBlank(this.id)) {
+			return this.id;
+		}
+		return UUID.randomUUID().toString();
 	}
 
 	public void setId(String id) {
 		this.id = id;
 	}
 
-	public String getName() {
-		return this.name;
+	@Temporal(TemporalType.TIMESTAMP)
+	@Column(name = "CREATEDATETIME", length = 7)
+	public Date getCreatedatetime() {
+		if (this.createdatetime != null)
+			return this.createdatetime;
+		return new Date();
 	}
 
-	public void setName(String name) {
-		this.name = name;
+	public void setCreatedatetime(Date createdatetime) {
+		this.createdatetime = createdatetime;
 	}
 
+	@Temporal(TemporalType.TIMESTAMP)
+	@Column(name = "UPDATEDATETIME", length = 7)
+	public Date getUpdatedatetime() {
+		if (this.updatedatetime != null)
+			return this.updatedatetime;
+		return new Date();
+	}
+
+	public void setUpdatedatetime(Date updatedatetime) {
+		this.updatedatetime = updatedatetime;
+	}
+
+	@Column(name = "LOGINNAME", nullable = false, length = 100)
+	public String getLoginname() {
+		return this.loginname;
+	}
+
+	public void setLoginname(String loginname) {
+		this.loginname = loginname;
+	}
+
+	@Column(name = "PWD", length = 100)
 	public String getPwd() {
 		return this.pwd;
 	}
@@ -67,20 +105,69 @@ public class Tuser implements java.io.Serializable {
 		this.pwd = pwd;
 	}
 
-	public Date getCreatedatetime() {
-		return this.createdatetime;
+	@Column(name = "NAME", length = 100)
+	public String getName() {
+		return this.name;
 	}
 
-	public void setCreatedatetime(Date createdatetime) {
-		this.createdatetime = createdatetime;
+	public void setName(String name) {
+		this.name = name;
 	}
 
-	public Date getModifydatetime() {
-		return this.modifydatetime;
+	@Column(name = "SEX", length = 1)
+	public String getSex() {
+		return this.sex;
 	}
 
-	public void setModifydatetime(Date modifydatetime) {
-		this.modifydatetime = modifydatetime;
+	public void setSex(String sex) {
+		this.sex = sex;
+	}
+
+	@Column(name = "AGE", precision = 8, scale = 0)
+	public Integer getAge() {
+		return this.age;
+	}
+
+	public void setAge(Integer age) {
+		this.age = age;
+	}
+
+	@Column(name = "PHOTO", length = 200)
+	public String getPhoto() {
+		return this.photo;
+	}
+
+	public void setPhoto(String photo) {
+		this.photo = photo;
+	}
+
+	@ManyToMany(fetch = FetchType.LAZY)
+	@JoinTable(name = "TUSER_TORGANIZATION", schema = "", joinColumns = { @JoinColumn(name = "TUSER_ID", nullable = false, updatable = false) }, inverseJoinColumns = { @JoinColumn(name = "TORGANIZATION_ID", nullable = false, updatable = false) })
+	public Set<Torganization> getTorganizations() {
+		return this.torganizations;
+	}
+
+	public void setTorganizations(Set<Torganization> torganizations) {
+		this.torganizations = torganizations;
+	}
+
+	@ManyToMany(fetch = FetchType.LAZY)
+	@JoinTable(name = "TUSER_TROLE", schema = "", joinColumns = { @JoinColumn(name = "TUSER_ID", nullable = false, updatable = false) }, inverseJoinColumns = { @JoinColumn(name = "TROLE_ID", nullable = false, updatable = false) })
+	public Set<Trole> getTroles() {
+		return this.troles;
+	}
+
+	public void setTroles(Set<Trole> troles) {
+		this.troles = troles;
+	}
+
+	@Transient
+	public String getIp() {
+		return ip;
+	}
+
+	public void setIp(String ip) {
+		this.ip = ip;
 	}
 
 }

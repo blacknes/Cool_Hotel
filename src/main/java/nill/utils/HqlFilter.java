@@ -29,7 +29,7 @@ import org.apache.commons.lang3.time.DateUtils;
  * 
  * // EQ 相等 // NE 不等 // LT 小于 // GT 大于 // LE 小于等于 // GE 大于等于 // LK 模糊 // RLK 右模糊 // LLK 左模糊
  * 
- * @author 孙宇
+ * @author nill
  * 
  */
 public class HqlFilter {

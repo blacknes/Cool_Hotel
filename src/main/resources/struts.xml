@@ -27,7 +27,55 @@
 	<!-- 对于WebLogic,Orion,OC4J此属性应该设置成true -->
 	<constant name="struts.dispatcher.parametersWorkaround" value="false" />
 
-	<package name="basePackage" extends="struts-default">
+	<package name="basePackage" extends="struts-default" namespace="/">
+
+		<interceptors>
+			<!-- javamelody拦截器 -->
+			<interceptor name="monitoring" class="net.bull.javamelody.StrutsInterceptor" />
+			<interceptor-stack name="monitoringStack">
+				<interceptor-ref name="monitoring" />
+				<interceptor-ref name="defaultStack" />
+			</interceptor-stack>
+			<!-- 字符集拦截器 -->
+			<interceptor name="encodingInterceptor" class="nill.interceptor.base.EncodingInterceptor" />
+			<interceptor-stack name="encodingStack">
+				<interceptor-ref name="monitoringStack"></interceptor-ref>
+				<interceptor-ref name="encodingInterceptor"></interceptor-ref>
+			</interceptor-stack>
+			<!-- session拦截器 -->
+			<interceptor name="sessionInterceptor" class="nill.interceptor.base.SessionInterceptor" />
+			<interceptor-stack name="sessionStack">
+				<interceptor-ref name="encodingStack"></interceptor-ref>
+				<interceptor-ref name="sessionInterceptor">
+					<!-- doNotNeedSessionAndSecurity_ 开头的和doNotNeedSession_ 开头的方法不拦截 -->
+					<param name="excludeMethods">doNotNeedSession_*,doNotNeedSessionAndSecurity_*</param>
+				</interceptor-ref>
+			</interceptor-stack>
+			<!-- 权限拦截器 -->
+			<interceptor name="securityInterceptor" class="nill.interceptor.base.SecurityInterceptor" />
+			<interceptor-stack name="securityStack">
+				<interceptor-ref name="sessionStack"></interceptor-ref>
+				<interceptor-ref name="securityInterceptor">
+					<!-- doNotNeedSessionAndSecurity_ 开头的和doNotNeedSecurity_ 开头的方法不拦截 -->
+					<param name="excludeMethods">doNotNeedSecurity_*,doNotNeedSessionAndSecurity_*</param>
+				</interceptor-ref>
+			</interceptor-stack>
+		</interceptors>
+		<!-- 全局拦截器栈 -->
+		<default-interceptor-ref name="securityStack"></default-interceptor-ref>
+
+		<global-results>
+			<!-- 没有session -->
+			<result name="noSession">/error/noSession.jsp</result>
+			<!-- 没有权限 -->
+			<result name="noSecurity">/error/noSecurity.jsp</result>
+			<!-- struts抛异常 -->
+			<result name="strutsException">/error/strutsException.jsp</result>
+		</global-results>
+
+		<global-exception-mappings>
+			<exception-mapping result="strutsException" exception="java.lang.Exception"></exception-mapping>
+		</global-exception-mappings>
 
 
 	</package>

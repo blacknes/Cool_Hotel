@@ -1,6 +1,7 @@
 package nill.test;
 
 import java.util.Date;
+
 import java.util.UUID;
 
 import nill.model.Tuser;
@@ -14,15 +15,15 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.transaction.annotation.Transactional;
 
+
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration(locations = { "classpath:spring.xml", "classpath:spring-hibernate.xml"})
+@ContextConfiguration(locations = { "classpath:spring.xml", "classpath:spring-hibernate.xml", "classpath:spring-druid.xml" })
 public class TestSpringHibernate {
 	
 	@Autowired
 	private UserServiceI userService;
 	
 	@Test
-	@Transactional(readOnly = true)
 	public void test(){
 		
 //		ApplicationContext ac = new ClassPathXmlApplicationContext(new String[]{"classpath:spring.xml","classpath:spring-hibernate.xml"});
@@ -30,6 +31,7 @@ public class TestSpringHibernate {
 		Tuser t = new Tuser();
 		t.setId(UUID.randomUUID().toString());
 		t.setName("nill");
+		t.setLoginname("nill");
 		t.setPwd("123456");
 		t.setCreatedatetime(new Date());
 		userService.save(t);
