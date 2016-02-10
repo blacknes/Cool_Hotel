@@ -1,6 +1,7 @@
 Test
 Hi: all
 
-this is master for origin
+this is clean_master for origin
 
-here is master branch
+here is clean_master branch
+
