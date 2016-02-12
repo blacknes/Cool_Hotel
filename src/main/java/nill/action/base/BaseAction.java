@@ -43,6 +43,11 @@ import com.opensymphony.xwork2.ActionSupport;
 @Action
 public class BaseAction<T> extends ActionSupport {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
 	private static final Logger logger = Logger.getLogger(BaseAction.class);
 
 	protected int page = 1;// 当前页

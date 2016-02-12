@@ -22,7 +22,7 @@ import org.springframework.stereotype.Service;
  * 
  */
 @Service
-public class RoleServiceImpl extends BaseServiceImpl<Trole> implements RoleServiceI {
+public class RoleServiceImplmpl extends BaseServiceImpl<Trole> implements RoleServiceI {
 
 	@Autowired
 	private BaseDaoI<Tuser> userDao;

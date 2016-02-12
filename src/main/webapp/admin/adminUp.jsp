@@ -12,7 +12,7 @@
 	};
 	var logoutFun = function() {
 		$.post('${pageContext.request.contextPath}/base/user!doNotNeedSessionAndSecurity_logout.action', function(result) {
-			location.replace('${pageContext.request.contextPath}/admin/adminMain.jsp');
+			location.replace('${pageContext.request.contextPath}/adminLogin.jsp');
 		}, 'json');
 	};
 	var showMyInfoFun = function() {

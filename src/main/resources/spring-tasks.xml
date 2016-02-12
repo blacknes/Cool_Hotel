@@ -12,18 +12,10 @@
 		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd
 		http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd">
 
-	<!-- 配置druid监控spring jdbc -->
-	<bean id="druid-stat-interceptor" class="com.alibaba.druid.support.spring.stat.DruidStatInterceptor" />
-
-	<bean id="druid-stat-pointcut" class="org.springframework.aop.support.JdkRegexpMethodPointcut" scope="prototype">
-		<property name="patterns">
-			<list>
-				<value>nill.service.*</value>
-			</list>
-		</property>
-	</bean>
-	<aop:config>
-		<aop:advisor advice-ref="druid-stat-interceptor" pointcut-ref="druid-stat-pointcut" />
-	</aop:config>
+	<!-- 每天晚上23点59分59秒修复一下数据库，修复白天大家测试后造成的数据错乱 -->
+	<task:scheduled-tasks>
+		<!-- 执行initServiceImpl里面的initDb方法，执行频率是cron表达式 -->
+		<task:scheduled ref="initServiceImpl" method="initDb" cron="59 59 23 * * ?" />
+	</task:scheduled-tasks>
 
 </beans>

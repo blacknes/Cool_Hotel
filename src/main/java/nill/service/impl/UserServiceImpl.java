@@ -101,13 +101,13 @@ public class UserServiceImpl extends BaseServiceImpl<Tuser> implements UserServi
 	public Long countUserByRoleId(String roleId) {
 		Map<String, Object> params = new HashMap<String, Object>();
 		params.put("roleId", roleId);
-		String hql = "select count(*) from Tuser t join t.syroles role where role.id = :roleId";
+		String hql = "select count(*) from Tuser t join t.troles role where role.id = :roleId";
 		return count(hql, params);
 	}
 
 	@Override
 	public Long countUserByNotRoleId() {
-		String hql = "select count(*) from Tuser t left join t.syroles role where role.id is null";
+		String hql = "select count(*) from Tuser t left join t.troles role where role.id is null";
 		return count(hql);
 	}
 
