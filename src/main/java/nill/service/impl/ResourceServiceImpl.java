@@ -169,7 +169,7 @@ public class ResourceServiceImpl extends BaseServiceImpl<Tresource>  implements 
 
 	@Override
 	public List<Tresource> findResourceByFilter(HqlFilter hqlFilter) {
-		String hql = "select distinct t from tresource t left join t.troles role left join t.torganizations organization";
+		String hql = "select distinct t from Tresource t left join t.troles role left join t.torganizations organization";
 		return find(hql + hqlFilter.getWhereHql(), hqlFilter.getParams());
 	}
 

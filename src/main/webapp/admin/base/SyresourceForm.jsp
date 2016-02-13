@@ -53,14 +53,15 @@
 			$.post(sy.contextPath + '/base/resource!getById.action', {
 				id : $(':input[name="data.id"]').val(),
 			}, function(result) {
+				window.alert(result);
 				if (result.id != undefined) {
 					$('form').form('load', {
 						'data.id' : result.id,
 						'data.name' : result.name,
 						'data.url' : result.url,
-						'data.syresourcetype.id' : result.syresourcetype.id,
+						'data.tresourcetype.id' : result.tresourcetype.id,
 						'data.description' : result.description,
-						'data.syresource.id' : result.syresource ? result.syresource.id : '',
+						'data.tresource.id' : result.tresource ? result.tresource.id : '',
 						'data.iconCls' : result.iconCls,
 						'data.seq' : result.seq,
 						'data.target' : result.target
@@ -88,11 +89,11 @@
 					<th>资源路径</th>
 					<td><input name="data.url" /></td>
 					<th>资源类型</th>
-					<td><select name="data.syresourcetype.id" class="easyui-combobox" data-options="required:true,editable:false,valueField:'id',textField:'name',url:'<%=contextPath%>/base/syresourcetype!doNotNeedSecurity_combobox.sy',panelHeight:'auto'" style="width: 155px;"></select></td>
+					<td><select name="data.tresourcetype.id" class="easyui-combobox" data-options="required:true,editable:false,valueField:'id',textField:'name',url:'<%=contextPath%>/base/resourcetype!doNotNeedSecurity_combobox.action',panelHeight:'auto'" style="width: 155px;"></select></td>
 				</tr>
 				<tr>
 					<th>上级资源</th>
-					<td><select id="syresource_id" name="data.syresource.id" class="easyui-combotree" data-options="editable:false,idField:'id',textField:'text',parentField:'pid',url:'<%=contextPath%>/base/syresource!doNotNeedSecurity_getMainMenu.sy'" style="width: 155px;"></select><img class="iconImg ext-icon-cross" onclick="$('#syresource_id').combotree('clear');" title="清空" /></td>
+					<td><select id="tresource_id" name="data.tresource.id" class="easyui-combotree" data-options="editable:false,idField:'id',textField:'text',parentField:'pid',url:'<%=contextPath%>/base/resource!doNotNeedSecurity_getMainMenu.action'" style="width: 155px;"></select><img class="iconImg ext-icon-cross" onclick="$('#syresource_id').combotree('clear');" title="清空" /></td>
 					<th>资源图标</th>
 					<td><input id="iconCls" name="data.iconCls" readonly="readonly" style="padding-left: 18px; width: 134px;" /><img class="iconImg ext-icon-zoom" onclick="showIcons();" title="浏览图标" />&nbsp;<img class="iconImg ext-icon-cross" onclick="$('#iconCls').val('');$('#iconCls').attr('class','');" title="清空" /></td>
 				</tr>

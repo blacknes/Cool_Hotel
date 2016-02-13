@@ -9,20 +9,20 @@
 	<resources name="资源">
 
 		<!-- 预约管理 -->
-		<resource id="yygl" name="预约管理" url="/admin/adminIndex.jsp" description="EasyUI还能做到更多，只有你想不到，没有做不到！" seq="0" iconCls="ext-icon-asterisk_orange">
+		<resource id="yygl" name="预约管理" url="/admin/adminIndex.jsp" description="预约酒店房间" seq="0" iconCls="ext-icon-asterisk_orange">
 			<resourcetype id="0" name="菜单" />
 		</resource>
-		
-		<resource id="jdyy" name="酒店预约" url="/ws" description="Apache CXF DEMO" seq="0" iconCls="ext-icon-world"  pid="yygl">
+
+		<resource id="jdyy" name="酒店预约" url="/ws" description="Apache CXF DEMO" seq="0" iconCls="ext-icon-world" pid="yygl">
 			<resourcetype id="0" name="菜单" />
 		</resource>
 
 		<!-- 酒店订房 -->
-		<resource id="jddf" name="酒店订房" url="/admin/adminIndex.jsp" description="EasyUI还能做到更多，只有你想不到，没有做不到！" seq="1" iconCls="ext-icon-asterisk_orange">
+		<resource id="jddf" name="酒店订房" url="/admin/adminIndex.jsp" description="提前预定酒店房间" seq="1" iconCls="ext-icon-asterisk_orange">
 			<resourcetype id="0" name="菜单" />
 		</resource>
 
-		<resource id="jdyd" name="酒店预订" url="/admin/adminIndex.jsp" description="Apache CXF DEMO" seq="0" iconCls="ext-icon-world" pid="jddf">
+		<resource id="jdyd" name="酒店预订" url="/admin/base/Nillbookroom.jsp" description="Apache CXF DEMO" seq="0" iconCls="ext-icon-world" pid="jddf">
 			<resourcetype id="0" name="菜单" />
 		</resource>
 		<resource id="jdrz" name="酒店入住" url="/admin/adminIndex.jsp" description="针对EasyUI二次开发的DEMO" seq="1" iconCls="ext-icon-award_star_bronze_1" pid="jddf">
@@ -37,9 +37,27 @@
 		<resource id="dfxxgl" name="订房信息管理" url="/admin/adminIndex.jsp" description="Apache CXF DEMO" seq="0" iconCls="ext-icon-world" pid="fjgl">
 			<resourcetype id="0" name="菜单" />
 		</resource>
-		<resource id="fjxxgl" name="房间信息管理" url="/admin/adminIndex.jsp" description="针对EasyUI二次开发的DEMO" seq="1" iconCls="ext-icon-award_star_bronze_1" pid="fjgl">
+
+		<!-- 房间信息管理部分 -->
+		<resource id="fjxxgl" name="房间信息管理" url="/admin/base/Nillroom.jsp" description="针对EasyUI二次开发的DEMO" seq="1" iconCls="ext-icon-award_star_bronze_1" pid="fjgl">
 			<resourcetype id="0" name="菜单" />
 		</resource>
+		<resource id="fjlb" name="房间列表" url="/base/room!grid" description="查询用户列表" seq="0" iconCls="ext-icon-bullet_wrench" pid="fjxxgl">
+			<resourcetype id="1" name="功能" />
+		</resource>
+		<resource id="fjtj" name="添加房间" url="/base/room!save" description="添加房间" seq="1" iconCls="ext-icon-bullet_wrench" pid="fjxxgl">
+			<resourcetype id="1" name="功能" />
+		</resource>
+		<resource id="fjbj" name="编辑房间" url="/base/room!update" description="编辑房间" seq="2" iconCls="ext-icon-bullet_wrench" pid="fjxxgl">
+			<resourcetype id="1" name="功能" />
+		</resource>
+		<resource id="fjsc" name="删除房间" url="/base/room!delete" description="删除房间" seq="3" iconCls="ext-icon-bullet_wrench" pid="fjxxgl">
+			<resourcetype id="1" name="功能" />
+		</resource>
+		<resource id="fjck" name="查看房间" url="/base/room!getById" description="查看房间" seq="4" iconCls="ext-icon-bullet_wrench" pid="fjxxgl">
+			<resourcetype id="1" name="功能" />
+		</resource>
+
 
 		<!-- 系统监控 -->
 		<resource id="xtjk" name="系统监控" url="/admin/adminIndex.jsp" description="监控系统运行情况等信息" seq="3" iconCls="ext-icon-monitor">
@@ -181,18 +199,26 @@
 
 	<roles_resources name="角色和资源对应关系">
 		<role id="1" name="Guest角色">
-		
+
+			<!-- 预约管理 -->
 			<resource id="yygl" name="预约管理" />
 			<resource id="jdyy" name="酒店预约" />
-			
+
+			<!-- 酒店订房 -->
 			<resource id="jddf" name="酒店订房" />
 			<resource id="jdyd" name="酒店预订" />
 			<resource id="jdrz" name="酒店入住" />
-			
+
+			<!-- 房间管理 -->
 			<resource id="fjgl" name="房间管理" />
+
 			<resource id="dfxxgl" name="订房信息管理" />
+
 			<resource id="fjxxgl" name="房间信息管理" />
-			
+			<resource id="fjlb" name="房间列表" />
+			<resource id="fjck" name="查看房间" />
+
+			<!-- 系统管理 -->
 			<resource id="xtgl" name="系统管理" />
 
 			<resource id="zygl" name="资源管理" />
@@ -291,32 +317,32 @@
 	</organizations_resources>
 
 	<users name="用户">
-		<user id="0" loginname="nill" pwd="123456" name="nill" sex="1" age="30" />
+		<user id="0" loginname="nill" pwd="123456" name="nill" sex="1" age="20" />
 		<user id="1" loginname="guest" pwd="123456" name="guest" sex="1" age="30" />
-		<user id="2" loginname="admin1" pwd="123456" name="admin1" sex="0" age="30" />
+		<user id="2" loginname="jack" pwd="123456" name="admin1" sex="1" age="20" />
 		<user id="3" loginname="admin2" pwd="123456" name="admin2" sex="0" age="30" />
-		<user id="4" loginname="admin3" pwd="123456" name="admin3" sex="0" age="30" />
-		<user id="5" loginname="admin4" pwd="123456" name="admin4" sex="0" age="30" />
-		<user id="6" loginname="admin5" pwd="123456" name="admin5" sex="0" age="30" />
+		<user id="4" loginname="admin" pwd="123456" name="admin" sex="1" age="20" />
+		<user id="5" loginname="doudou" pwd="123456" name="doudou" sex="1" age="20" />
+		<user id="6" loginname="lml" pwd="123456" name="lml" sex="0" age="30" />
 	</users>
 
 	<users_roles name="用户和角色对应关系">
 		<user id="1" loginname="guest">
 			<role id="1" name="Guest角色" />
 		</user>
-		<user id="2" loginname="admin1">
+		<user id="2" loginname="admin">
 			<role id="2" name="admin1" />
 		</user>
 		<user id="3" loginname="admin2">
 			<role id="3" name="admin2" />
 		</user>
-		<user id="4" loginname="admin3">
+		<user id="4" loginname="doudou">
 			<role id="4" name="admin3" />
 		</user>
-		<user id="5" loginname="admin4">
+		<user id="5" loginname="lml">
 			<role id="5" name="admin4" />
 		</user>
-		<user id="6" loginname="admin5">
+		<user id="6" loginname="jack">
 			<role id="6" name="admin5" />
 		</user>
 	</users_roles>
@@ -326,5 +352,16 @@
 			<organization id="0" name="一级机构" />
 		</user>
 	</users_organizations>
+
+	<!-- 房间 -->
+	<rooms name="房间 ">
+		<room id="0" roomName="nill" roomProperty="1" roomStatus="0" />
+		<room id="1" roomName="jack" roomProperty="1" roomStatus="1" />
+		<room id="2" roomName="lml" roomProperty="1" roomStatus="2" />
+		<room id="3" roomName="doudou" roomProperty="0" roomStatus="3" />
+		<room id="4" roomName="erdou" roomProperty="0" roomStatus="1" />
+		<room id="5" roomName="sadou" roomProperty="0" roomStatus="0" />
+		<room id="6" roomName="sidou" roomProperty="0" roomStatus="0" />
+	</rooms>
 
 </data>

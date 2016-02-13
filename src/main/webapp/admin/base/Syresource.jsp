@@ -101,7 +101,7 @@
 			}, {
 				width : '60',
 				title : '资源类型',
-				field : 'syresourcetype',
+				field : 'tresourcetype',
 				formatter : function(value, row) {
 					return value.name;
 				}

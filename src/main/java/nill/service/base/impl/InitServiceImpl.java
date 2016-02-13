@@ -8,6 +8,7 @@ import nill.model.Torganization;
 import nill.model.Tresource;
 import nill.model.Tresourcetype;
 import nill.model.Trole;
+import nill.model.Troom;
 import nill.model.Tuser;
 import nill.service.base.InitServiceI;
 import nill.utils.MD5Util;
@@ -55,6 +56,8 @@ public class InitServiceImpl implements InitServiceI {
 			initUserRole(document);// 初始化用户和角色的关系
 
 			initUserOrganization(document);// 初始化用户和机构的关系
+			
+			initRoom(document);
 			
 		} catch (DocumentException e) {
 			// TODO Auto-generated catch block
@@ -276,6 +279,27 @@ public class InitServiceImpl implements InitServiceI {
 			user.getTorganizations().addAll(baseDao.find("from Torganization"));
 			logger.info(JSON.toJSONStringWithDateFormat(user, "yyyy-MM-dd HH:mm:ss"));
 			baseDao.saveOrUpdate(user);
+		}
+	}
+	
+	private void initRoom(Document document){
+		List<Node> childNodes = document.selectNodes("//rooms/room");
+		for (Node node : childNodes) {
+			Troom room = (Troom) baseDao.getById(Troom.class, node.valueOf("@id"));
+			if (room == null) {
+				room = new Troom();
+			}
+			room.setId(node.valueOf("@id"));
+			room.setRoomName(node.valueOf("@roomName"));
+			room.setRoomProperty(node.valueOf("@roomProperty"));
+			room.setRoomStatus(node.valueOf("@roomStatus"));
+
+			logger.info(JSON.toJSONStringWithDateFormat(room, "yyyy-MM-dd HH:mm:ss"));
+			List<Troom> ul = baseDao.find("from Troom r where r.roomName = '" + room.getRoomName() + "' and r.id != '" + room.getId() + "'");
+			for (Troom r : ul) {
+				baseDao.delete(r);
+			}
+			baseDao.saveOrUpdate(room);
 		}
 	}
 

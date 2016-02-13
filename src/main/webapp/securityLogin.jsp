@@ -46,6 +46,7 @@
 			return false;
 
 		});
+		$('#username').focus();
 	});
 </script>
 </head>
