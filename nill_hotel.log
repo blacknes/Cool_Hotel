@@ -6339,3 +6339,938 @@ Caused by: org.hibernate.PropertyNotFoundException: Could not find a setter for 
 [INFO][2016-02-13 13:17:27,171][org.springframework.context.support.GenericApplicationContext]Closing org.springframework.context.support.GenericApplicationContext@642cb3dc: startup date [Sat Feb 13 13:17:25 CST 2016]; root of context hierarchy
 [INFO][2016-02-13 13:17:27,171][org.springframework.beans.factory.support.DefaultListableBeanFactory]Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@465e1377: defining beans [org.springframework.beans.factory.config.PropertyPlaceholderConfigurer#0,baseDaoImpl,baseServiceImpl,initServiceImpl,onlineServiceImpl,organizationServiceImpl,resourceServiceImpl,roleServiceImplmpl,rresourcetypeServiceImpl,userServiceImpl,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.internalPersistenceAnnotationProcessor,dataSource,sessionFactory,transactionManager,transactionAdvice,org.springframework.aop.config.internalAutoProxyCreator,transactionPointcut,org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0,druid-stat-interceptor,druid-stat-pointcut,org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#1,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor]; root of factory hierarchy
 [INFO][2016-02-13 13:17:27,176][com.alibaba.druid.pool.DruidDataSource]{dataSource-1} closed
+[INFO][2016-02-16 17:42:58,022][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from class path resource [spring.xml]
+[INFO][2016-02-16 17:42:58,176][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from class path resource [spring-hibernate.xml]
+[INFO][2016-02-16 17:42:58,222][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from class path resource [spring-druid.xml]
+[INFO][2016-02-16 17:42:58,243][org.springframework.context.support.GenericApplicationContext]Refreshing org.springframework.context.support.GenericApplicationContext@642cb3dc: startup date [Tue Feb 16 17:42:58 CST 2016]; root of context hierarchy
+[INFO][2016-02-16 17:42:58,359][org.springframework.beans.factory.config.PropertyPlaceholderConfigurer]Loading properties file from class path resource [config.properties]
+[INFO][2016-02-16 17:42:58,389][org.springframework.beans.factory.support.DefaultListableBeanFactory]Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@76f442aa: defining beans [org.springframework.beans.factory.config.PropertyPlaceholderConfigurer#0,baseDaoImpl,baseServiceImpl,initServiceImpl,onlineServiceImpl,organizationServiceImpl,resourceServiceImpl,roleServiceImplmpl,roomServiceImpl,rresourcetypeServiceImpl,userServiceImpl,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.internalPersistenceAnnotationProcessor,dataSource,sessionFactory,transactionManager,transactionAdvice,org.springframework.aop.config.internalAutoProxyCreator,transactionPointcut,org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0,druid-stat-interceptor,druid-stat-pointcut,org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#1,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor]; root of factory hierarchy
+[ERROR][2016-02-16 17:42:58,582][com.alibaba.druid.pool.DruidAbstractDataSource]maxIdle is deprecated
+[INFO][2016-02-16 17:42:58,639][com.alibaba.druid.pool.DruidDataSource]{dataSource-1} inited
+[INFO][2016-02-16 17:42:58,829][org.hibernate.annotations.common.Version]HCANN000001: Hibernate Commons Annotations {4.0.2.Final}
+[INFO][2016-02-16 17:42:58,834][org.hibernate.Version]HHH000412: Hibernate Core {4.2.7.SP1}
+[INFO][2016-02-16 17:42:58,835][org.hibernate.cfg.Environment]HHH000206: hibernate.properties not found
+[INFO][2016-02-16 17:42:58,836][org.hibernate.cfg.Environment]HHH000021: Bytecode provider name : javassist
+[INFO][2016-02-16 17:42:59,063][org.hibernate.dialect.Dialect]HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+[INFO][2016-02-16 17:42:59,195][org.hibernate.engine.transaction.internal.TransactionFactoryInitiator]HHH000399: Using default transaction strategy (direct JDBC transactions)
+[INFO][2016-02-16 17:42:59,199][org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory]HHH000397: Using ASTQueryTranslatorFactory
+[INFO][2016-02-16 17:42:59,386][org.hibernate.tool.hbm2ddl.SchemaUpdate]HHH000228: Running hbm2ddl schema update
+[INFO][2016-02-16 17:42:59,386][org.hibernate.tool.hbm2ddl.SchemaUpdate]HHH000102: Fetching database metadata
+[INFO][2016-02-16 17:42:59,389][org.hibernate.tool.hbm2ddl.SchemaUpdate]HHH000396: Updating schema
+[INFO][2016-02-16 17:42:59,403][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000261: Table found: cool_hotel.tbookinguser
+[INFO][2016-02-16 17:42:59,403][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000037: Columns: [indate, updatedatetime, id, roomcount, phone, email, name, createdatetime, outdate]
+[INFO][2016-02-16 17:42:59,404][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000108: Foreign keys: []
+[INFO][2016-02-16 17:42:59,404][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000126: Indexes: [primary]
+[INFO][2016-02-16 17:42:59,412][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000261: Table found: cool_hotel.tonline
+[INFO][2016-02-16 17:42:59,413][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000037: Columns: [id, loginname, createdatetime, type, ip]
+[INFO][2016-02-16 17:42:59,413][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000108: Foreign keys: []
+[INFO][2016-02-16 17:42:59,413][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000126: Indexes: [primary]
+[INFO][2016-02-16 17:42:59,420][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000261: Table found: cool_hotel.torganization
+[INFO][2016-02-16 17:42:59,420][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000037: Columns: [updatedatetime, id, address, name, seq, createdatetime, torganization_id, code, iconcls]
+[INFO][2016-02-16 17:42:59,420][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000108: Foreign keys: [fk_qqsb57hntt6y7rgxpyv193hro]
+[INFO][2016-02-16 17:42:59,420][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000126: Indexes: [fk_qqsb57hntt6y7rgxpyv193hro, primary]
+[INFO][2016-02-16 17:42:59,425][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000261: Table found: cool_hotel.torganization_tresource
+[INFO][2016-02-16 17:42:59,425][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000037: Columns: [tresource_id, torganization_id]
+[INFO][2016-02-16 17:42:59,425][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000108: Foreign keys: [fk_sumqrlo172d24o0h8rf1buqc6, fk_pn8e59lvj1b3tw6c5el9px7rw]
+[INFO][2016-02-16 17:42:59,426][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000126: Indexes: [fk_sumqrlo172d24o0h8rf1buqc6, fk_pn8e59lvj1b3tw6c5el9px7rw, primary]
+[INFO][2016-02-16 17:42:59,432][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000261: Table found: cool_hotel.tresource
+[INFO][2016-02-16 17:42:59,432][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000037: Columns: [updatedatetime, id, tresourcetype_id, description, name, target, seq, tresource_id, createdatetime, url, iconcls]
+[INFO][2016-02-16 17:42:59,432][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000108: Foreign keys: [fk_givl2cl1b219fbu0v8ydo72te, fk_hujigsbsqxao04bgjum7k23ig]
+[INFO][2016-02-16 17:42:59,432][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000126: Indexes: [fk_givl2cl1b219fbu0v8ydo72te, fk_hujigsbsqxao04bgjum7k23ig, primary]
+[INFO][2016-02-16 17:42:59,436][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000261: Table found: cool_hotel.tresourcetype
+[INFO][2016-02-16 17:42:59,436][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000037: Columns: [updatedatetime, id, description, name, createdatetime]
+[INFO][2016-02-16 17:42:59,436][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000108: Foreign keys: []
+[INFO][2016-02-16 17:42:59,436][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000126: Indexes: [primary]
+[INFO][2016-02-16 17:42:59,443][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000261: Table found: cool_hotel.trole
+[INFO][2016-02-16 17:42:59,443][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000037: Columns: [updatedatetime, id, description, name, seq, createdatetime, iconcls]
+[INFO][2016-02-16 17:42:59,443][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000108: Foreign keys: []
+[INFO][2016-02-16 17:42:59,444][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000126: Indexes: [primary]
+[INFO][2016-02-16 17:42:59,448][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000261: Table found: cool_hotel.trole_tresource
+[INFO][2016-02-16 17:42:59,449][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000037: Columns: [trole_id, tresource_id]
+[INFO][2016-02-16 17:42:59,449][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000108: Foreign keys: [fk_rnj9t5lx9ngqnioc3kw49uhm1, fk_1ill8lguabbf2apj4ve5960o6]
+[INFO][2016-02-16 17:42:59,449][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000126: Indexes: [primary, fk_rnj9t5lx9ngqnioc3kw49uhm1, fk_1ill8lguabbf2apj4ve5960o6]
+[INFO][2016-02-16 17:42:59,454][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000261: Table found: cool_hotel.troom
+[INFO][2016-02-16 17:42:59,454][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000037: Columns: [updatedatetime, id, roomproperty, roomcancancel, roomname, createdatetime, roomstatus, roomprice, photo, roomnum]
+[INFO][2016-02-16 17:42:59,454][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000108: Foreign keys: []
+[INFO][2016-02-16 17:42:59,454][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000126: Indexes: [primary]
+[INFO][2016-02-16 17:42:59,459][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000261: Table found: cool_hotel.tuser
+[INFO][2016-02-16 17:42:59,459][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000037: Columns: [updatedatetime, id, loginname, sex, pwd, name, age, createdatetime, photo]
+[INFO][2016-02-16 17:42:59,459][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000108: Foreign keys: []
+[INFO][2016-02-16 17:42:59,459][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000126: Indexes: [primary]
+[INFO][2016-02-16 17:42:59,464][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000261: Table found: cool_hotel.tuser_torganization
+[INFO][2016-02-16 17:42:59,464][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000037: Columns: [torganization_id, tuser_id]
+[INFO][2016-02-16 17:42:59,464][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000108: Foreign keys: [fk_p5n9t5ypeafn30gjit4s0c2e1, fk_gdqjklqr9ob6fa0cnoqkjc4ok]
+[INFO][2016-02-16 17:42:59,465][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000126: Indexes: [fk_p5n9t5ypeafn30gjit4s0c2e1, fk_gdqjklqr9ob6fa0cnoqkjc4ok, primary]
+[INFO][2016-02-16 17:42:59,469][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000261: Table found: cool_hotel.tuser_trole
+[INFO][2016-02-16 17:42:59,469][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000037: Columns: [trole_id, tuser_id]
+[INFO][2016-02-16 17:42:59,469][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000108: Foreign keys: [fk_2gb56nnc2hjnphnfuinf9mspt, fk_8g3waitd93emrkb1sb4ue682l]
+[INFO][2016-02-16 17:42:59,469][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000126: Indexes: [fk_2gb56nnc2hjnphnfuinf9mspt, fk_8g3waitd93emrkb1sb4ue682l, primary]
+[INFO][2016-02-16 17:42:59,473][org.hibernate.tool.hbm2ddl.SchemaUpdate]HHH000232: Schema update complete
+[INFO][2016-02-16 17:42:59,529][org.springframework.orm.hibernate4.HibernateTransactionManager]Using DataSource [{
+	CreateTime:"2016-02-16 17:42:58",
+	ActiveCount:0,
+	PoolingCount:1,
+	CreateCount:1,
+	DestroyCount:0,
+	CloseCount:2,
+	ConnectCount:2,
+	Connections:[
+		{ID:262480203, ConnectTime:"2016-02-16 17:42:59", UseCount:2, LastActiveTime:"2016-02-16 17:42:59"}
+	]
+}] of Hibernate SessionFactory for HibernateTransactionManager
+[INFO][2016-02-16 17:42:59,619][nill.service.impl.UserServiceImpl] this is spring test while into the Spring
+[INFO][2016-02-16 17:42:59,807][org.springframework.test.context.transaction.TransactionalTestExecutionListener]Began transaction (1): transaction manager [org.springframework.orm.hibernate4.HibernateTransactionManager@56c8ca34]; rollback [true]
+[INFO][2016-02-16 17:42:59,902][org.springframework.test.context.transaction.TransactionalTestExecutionListener]Rolled back transaction after test execution for test context [TestContext@7cd7310d testClass = TestSpringHibernate, testInstance = nill.test.TestSpringHibernate@13d58c83, testMethod = test2@TestSpringHibernate, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@28fbf6a1 testClass = TestSpringHibernate, locations = '{classpath:spring.xml, classpath:spring-hibernate.xml, classpath:spring-druid.xml}', classes = '{}', contextInitializerClasses = '[]', activeProfiles = '{}', contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]]
+[INFO][2016-02-16 17:42:59,905][org.springframework.context.support.GenericApplicationContext]Closing org.springframework.context.support.GenericApplicationContext@642cb3dc: startup date [Tue Feb 16 17:42:58 CST 2016]; root of context hierarchy
+[INFO][2016-02-16 17:42:59,905][org.springframework.beans.factory.support.DefaultListableBeanFactory]Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@76f442aa: defining beans [org.springframework.beans.factory.config.PropertyPlaceholderConfigurer#0,baseDaoImpl,baseServiceImpl,initServiceImpl,onlineServiceImpl,organizationServiceImpl,resourceServiceImpl,roleServiceImplmpl,roomServiceImpl,rresourcetypeServiceImpl,userServiceImpl,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.internalPersistenceAnnotationProcessor,dataSource,sessionFactory,transactionManager,transactionAdvice,org.springframework.aop.config.internalAutoProxyCreator,transactionPointcut,org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0,druid-stat-interceptor,druid-stat-pointcut,org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#1,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor]; root of factory hierarchy
+[INFO][2016-02-16 17:42:59,913][com.alibaba.druid.pool.DruidDataSource]{dataSource-1} closed
+[INFO][2016-02-16 18:19:50,706][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from class path resource [spring.xml]
+[INFO][2016-02-16 18:19:50,869][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from class path resource [spring-hibernate.xml]
+[INFO][2016-02-16 18:19:50,917][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from class path resource [spring-druid.xml]
+[INFO][2016-02-16 18:19:50,937][org.springframework.context.support.GenericApplicationContext]Refreshing org.springframework.context.support.GenericApplicationContext@642cb3dc: startup date [Tue Feb 16 18:19:50 CST 2016]; root of context hierarchy
+[INFO][2016-02-16 18:19:51,047][org.springframework.beans.factory.config.PropertyPlaceholderConfigurer]Loading properties file from class path resource [config.properties]
+[INFO][2016-02-16 18:19:51,081][org.springframework.beans.factory.support.DefaultListableBeanFactory]Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@465e1377: defining beans [org.springframework.beans.factory.config.PropertyPlaceholderConfigurer#0,baseDaoImpl,baseServiceImpl,initServiceImpl,bookingServiceImpl,onlineServiceImpl,organizationServiceImpl,resourceServiceImpl,roleServiceImplmpl,roomServiceImpl,rresourcetypeServiceImpl,userServiceImpl,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.internalPersistenceAnnotationProcessor,dataSource,sessionFactory,transactionManager,transactionAdvice,org.springframework.aop.config.internalAutoProxyCreator,transactionPointcut,org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0,druid-stat-interceptor,druid-stat-pointcut,org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#1,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor]; root of factory hierarchy
+[ERROR][2016-02-16 18:19:51,285][com.alibaba.druid.pool.DruidAbstractDataSource]maxIdle is deprecated
+[INFO][2016-02-16 18:19:51,350][com.alibaba.druid.pool.DruidDataSource]{dataSource-1} inited
+[INFO][2016-02-16 18:19:51,530][org.hibernate.annotations.common.Version]HCANN000001: Hibernate Commons Annotations {4.0.2.Final}
+[INFO][2016-02-16 18:19:51,536][org.hibernate.Version]HHH000412: Hibernate Core {4.2.7.SP1}
+[INFO][2016-02-16 18:19:51,539][org.hibernate.cfg.Environment]HHH000206: hibernate.properties not found
+[INFO][2016-02-16 18:19:51,540][org.hibernate.cfg.Environment]HHH000021: Bytecode provider name : javassist
+[INFO][2016-02-16 18:19:51,758][org.hibernate.dialect.Dialect]HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+[INFO][2016-02-16 18:19:51,889][org.hibernate.engine.transaction.internal.TransactionFactoryInitiator]HHH000399: Using default transaction strategy (direct JDBC transactions)
+[INFO][2016-02-16 18:19:51,892][org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory]HHH000397: Using ASTQueryTranslatorFactory
+[INFO][2016-02-16 18:19:52,077][org.hibernate.tool.hbm2ddl.SchemaUpdate]HHH000228: Running hbm2ddl schema update
+[INFO][2016-02-16 18:19:52,077][org.hibernate.tool.hbm2ddl.SchemaUpdate]HHH000102: Fetching database metadata
+[INFO][2016-02-16 18:19:52,080][org.hibernate.tool.hbm2ddl.SchemaUpdate]HHH000396: Updating schema
+[INFO][2016-02-16 18:19:52,096][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000261: Table found: cool_hotel.tbookinguser
+[INFO][2016-02-16 18:19:52,096][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000037: Columns: [indate, updatedatetime, id, roomcount, phone, email, name, createdatetime, outdate]
+[INFO][2016-02-16 18:19:52,096][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000108: Foreign keys: []
+[INFO][2016-02-16 18:19:52,097][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000126: Indexes: [primary]
+[INFO][2016-02-16 18:19:52,102][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000261: Table found: cool_hotel.tonline
+[INFO][2016-02-16 18:19:52,102][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000037: Columns: [id, loginname, createdatetime, type, ip]
+[INFO][2016-02-16 18:19:52,102][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000108: Foreign keys: []
+[INFO][2016-02-16 18:19:52,102][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000126: Indexes: [primary]
+[INFO][2016-02-16 18:19:52,110][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000261: Table found: cool_hotel.torganization
+[INFO][2016-02-16 18:19:52,110][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000037: Columns: [updatedatetime, id, address, name, seq, createdatetime, torganization_id, code, iconcls]
+[INFO][2016-02-16 18:19:52,110][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000108: Foreign keys: [fk_qqsb57hntt6y7rgxpyv193hro]
+[INFO][2016-02-16 18:19:52,110][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000126: Indexes: [fk_qqsb57hntt6y7rgxpyv193hro, primary]
+[INFO][2016-02-16 18:19:52,115][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000261: Table found: cool_hotel.torganization_tresource
+[INFO][2016-02-16 18:19:52,115][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000037: Columns: [tresource_id, torganization_id]
+[INFO][2016-02-16 18:19:52,115][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000108: Foreign keys: [fk_sumqrlo172d24o0h8rf1buqc6, fk_pn8e59lvj1b3tw6c5el9px7rw]
+[INFO][2016-02-16 18:19:52,115][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000126: Indexes: [fk_sumqrlo172d24o0h8rf1buqc6, fk_pn8e59lvj1b3tw6c5el9px7rw, primary]
+[INFO][2016-02-16 18:19:52,121][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000261: Table found: cool_hotel.tresource
+[INFO][2016-02-16 18:19:52,121][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000037: Columns: [updatedatetime, id, tresourcetype_id, description, name, target, seq, tresource_id, createdatetime, url, iconcls]
+[INFO][2016-02-16 18:19:52,121][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000108: Foreign keys: [fk_givl2cl1b219fbu0v8ydo72te, fk_hujigsbsqxao04bgjum7k23ig]
+[INFO][2016-02-16 18:19:52,122][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000126: Indexes: [fk_givl2cl1b219fbu0v8ydo72te, fk_hujigsbsqxao04bgjum7k23ig, primary]
+[INFO][2016-02-16 18:19:52,128][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000261: Table found: cool_hotel.tresourcetype
+[INFO][2016-02-16 18:19:52,128][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000037: Columns: [updatedatetime, id, description, name, createdatetime]
+[INFO][2016-02-16 18:19:52,129][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000108: Foreign keys: []
+[INFO][2016-02-16 18:19:52,129][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000126: Indexes: [primary]
+[INFO][2016-02-16 18:19:52,134][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000261: Table found: cool_hotel.trole
+[INFO][2016-02-16 18:19:52,134][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000037: Columns: [updatedatetime, id, description, name, seq, createdatetime, iconcls]
+[INFO][2016-02-16 18:19:52,134][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000108: Foreign keys: []
+[INFO][2016-02-16 18:19:52,134][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000126: Indexes: [primary]
+[INFO][2016-02-16 18:19:52,141][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000261: Table found: cool_hotel.trole_tresource
+[INFO][2016-02-16 18:19:52,141][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000037: Columns: [trole_id, tresource_id]
+[INFO][2016-02-16 18:19:52,141][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000108: Foreign keys: [fk_rnj9t5lx9ngqnioc3kw49uhm1, fk_1ill8lguabbf2apj4ve5960o6]
+[INFO][2016-02-16 18:19:52,141][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000126: Indexes: [primary, fk_rnj9t5lx9ngqnioc3kw49uhm1, fk_1ill8lguabbf2apj4ve5960o6]
+[INFO][2016-02-16 18:19:52,146][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000261: Table found: cool_hotel.troom
+[INFO][2016-02-16 18:19:52,146][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000037: Columns: [updatedatetime, id, roomproperty, roomcancancel, roomname, createdatetime, roomstatus, roomprice, photo, roomnum]
+[INFO][2016-02-16 18:19:52,146][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000108: Foreign keys: []
+[INFO][2016-02-16 18:19:52,146][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000126: Indexes: [primary]
+[INFO][2016-02-16 18:19:52,151][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000261: Table found: cool_hotel.tuser
+[INFO][2016-02-16 18:19:52,151][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000037: Columns: [updatedatetime, id, loginname, sex, pwd, name, age, createdatetime, photo]
+[INFO][2016-02-16 18:19:52,151][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000108: Foreign keys: []
+[INFO][2016-02-16 18:19:52,151][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000126: Indexes: [primary]
+[INFO][2016-02-16 18:19:52,156][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000261: Table found: cool_hotel.tuser_torganization
+[INFO][2016-02-16 18:19:52,156][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000037: Columns: [torganization_id, tuser_id]
+[INFO][2016-02-16 18:19:52,157][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000108: Foreign keys: [fk_p5n9t5ypeafn30gjit4s0c2e1, fk_gdqjklqr9ob6fa0cnoqkjc4ok]
+[INFO][2016-02-16 18:19:52,157][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000126: Indexes: [fk_p5n9t5ypeafn30gjit4s0c2e1, fk_gdqjklqr9ob6fa0cnoqkjc4ok, primary]
+[INFO][2016-02-16 18:19:52,161][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000261: Table found: cool_hotel.tuser_trole
+[INFO][2016-02-16 18:19:52,161][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000037: Columns: [trole_id, tuser_id]
+[INFO][2016-02-16 18:19:52,161][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000108: Foreign keys: [fk_2gb56nnc2hjnphnfuinf9mspt, fk_8g3waitd93emrkb1sb4ue682l]
+[INFO][2016-02-16 18:19:52,162][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000126: Indexes: [fk_2gb56nnc2hjnphnfuinf9mspt, fk_8g3waitd93emrkb1sb4ue682l, primary]
+[INFO][2016-02-16 18:19:52,163][org.hibernate.tool.hbm2ddl.SchemaUpdate]HHH000232: Schema update complete
+[INFO][2016-02-16 18:19:52,223][org.springframework.orm.hibernate4.HibernateTransactionManager]Using DataSource [{
+	CreateTime:"2016-02-16 18:19:51",
+	ActiveCount:0,
+	PoolingCount:1,
+	CreateCount:1,
+	DestroyCount:0,
+	CloseCount:2,
+	ConnectCount:2,
+	Connections:[
+		{ID:1429414056, ConnectTime:"2016-02-16 18:19:51", UseCount:2, LastActiveTime:"2016-02-16 18:19:52"}
+	]
+}] of Hibernate SessionFactory for HibernateTransactionManager
+[INFO][2016-02-16 18:19:52,324][nill.service.impl.UserServiceImpl] this is spring test while into the Spring
+[INFO][2016-02-16 18:19:52,477][org.springframework.test.context.transaction.TransactionalTestExecutionListener]Began transaction (1): transaction manager [org.springframework.orm.hibernate4.HibernateTransactionManager@4946d29a]; rollback [true]
+[INFO][2016-02-16 18:19:52,575][org.springframework.test.context.transaction.TransactionalTestExecutionListener]Rolled back transaction after test execution for test context [TestContext@7077fcfb testClass = TestSpringHibernate, testInstance = nill.test.TestSpringHibernate@5581fc6c, testMethod = test2@TestSpringHibernate, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@48e3424f testClass = TestSpringHibernate, locations = '{classpath:spring.xml, classpath:spring-hibernate.xml, classpath:spring-druid.xml}', classes = '{}', contextInitializerClasses = '[]', activeProfiles = '{}', contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]]
+[INFO][2016-02-16 18:19:52,576][org.springframework.context.support.GenericApplicationContext]Closing org.springframework.context.support.GenericApplicationContext@642cb3dc: startup date [Tue Feb 16 18:19:50 CST 2016]; root of context hierarchy
+[INFO][2016-02-16 18:19:52,577][org.springframework.beans.factory.support.DefaultListableBeanFactory]Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@465e1377: defining beans [org.springframework.beans.factory.config.PropertyPlaceholderConfigurer#0,baseDaoImpl,baseServiceImpl,initServiceImpl,bookingServiceImpl,onlineServiceImpl,organizationServiceImpl,resourceServiceImpl,roleServiceImplmpl,roomServiceImpl,rresourcetypeServiceImpl,userServiceImpl,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.internalPersistenceAnnotationProcessor,dataSource,sessionFactory,transactionManager,transactionAdvice,org.springframework.aop.config.internalAutoProxyCreator,transactionPointcut,org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0,druid-stat-interceptor,druid-stat-pointcut,org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#1,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor]; root of factory hierarchy
+[INFO][2016-02-16 18:19:52,584][com.alibaba.druid.pool.DruidDataSource]{dataSource-1} closed
+[INFO][2016-02-27 10:43:04,318][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from class path resource [spring.xml]
+[INFO][2016-02-27 10:43:04,694][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from class path resource [spring-hibernate.xml]
+[INFO][2016-02-27 10:43:04,818][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from class path resource [spring-druid.xml]
+[INFO][2016-02-27 10:43:04,865][org.springframework.context.support.GenericApplicationContext]Refreshing org.springframework.context.support.GenericApplicationContext@17b90c55: startup date [Sat Feb 27 10:43:04 CST 2016]; root of context hierarchy
+[INFO][2016-02-27 10:43:05,115][org.springframework.beans.factory.config.PropertyPlaceholderConfigurer]Loading properties file from class path resource [config.properties]
+[INFO][2016-02-27 10:43:05,177][org.springframework.beans.factory.support.DefaultListableBeanFactory]Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@34de727a: defining beans [org.springframework.beans.factory.config.PropertyPlaceholderConfigurer#0,baseDaoImpl,baseServiceImpl,initServiceImpl,bookingServiceImpl,onlineServiceImpl,organizationServiceImpl,resourceServiceImpl,roleServiceImplmpl,roomServiceImpl,rresourcetypeServiceImpl,userServiceImpl,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.internalPersistenceAnnotationProcessor,dataSource,sessionFactory,transactionManager,transactionAdvice,org.springframework.aop.config.internalAutoProxyCreator,transactionPointcut,org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0,druid-stat-interceptor,druid-stat-pointcut,org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#1,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor]; root of factory hierarchy
+[ERROR][2016-02-27 10:43:05,630][com.alibaba.druid.pool.DruidAbstractDataSource]maxIdle is deprecated
+[INFO][2016-02-27 10:43:05,789][com.alibaba.druid.pool.DruidDataSource]{dataSource-1} inited
+[INFO][2016-02-27 10:43:06,163][org.hibernate.annotations.common.Version]HCANN000001: Hibernate Commons Annotations {4.0.2.Final}
+[INFO][2016-02-27 10:43:06,179][org.hibernate.Version]HHH000412: Hibernate Core {4.2.7.SP1}
+[INFO][2016-02-27 10:43:06,194][org.hibernate.cfg.Environment]HHH000206: hibernate.properties not found
+[INFO][2016-02-27 10:43:06,194][org.hibernate.cfg.Environment]HHH000021: Bytecode provider name : javassist
+[INFO][2016-02-27 10:43:06,709][org.hibernate.dialect.Dialect]HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+[INFO][2016-02-27 10:43:06,975][org.hibernate.engine.transaction.internal.TransactionFactoryInitiator]HHH000399: Using default transaction strategy (direct JDBC transactions)
+[INFO][2016-02-27 10:43:06,991][org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory]HHH000397: Using ASTQueryTranslatorFactory
+[INFO][2016-02-27 10:43:07,490][org.hibernate.tool.hbm2ddl.SchemaUpdate]HHH000228: Running hbm2ddl schema update
+[INFO][2016-02-27 10:43:07,490][org.hibernate.tool.hbm2ddl.SchemaUpdate]HHH000102: Fetching database metadata
+[INFO][2016-02-27 10:43:07,490][org.hibernate.tool.hbm2ddl.SchemaUpdate]HHH000396: Updating schema
+[INFO][2016-02-27 10:43:07,521][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000261: Table found: cool_hotel.tbookinguser
+[INFO][2016-02-27 10:43:07,521][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000037: Columns: [indate, updatedatetime, id, roomcount, phone, email, name, createdatetime, outdate]
+[INFO][2016-02-27 10:43:07,521][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000108: Foreign keys: []
+[INFO][2016-02-27 10:43:07,521][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000126: Indexes: [primary]
+[INFO][2016-02-27 10:43:07,537][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000261: Table found: cool_hotel.tonline
+[INFO][2016-02-27 10:43:07,537][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000037: Columns: [id, loginname, createdatetime, type, ip]
+[INFO][2016-02-27 10:43:07,537][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000108: Foreign keys: []
+[INFO][2016-02-27 10:43:07,537][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000126: Indexes: [primary]
+[INFO][2016-02-27 10:43:07,552][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000261: Table found: cool_hotel.torganization
+[INFO][2016-02-27 10:43:07,552][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000037: Columns: [updatedatetime, id, address, name, seq, createdatetime, torganization_id, code, iconcls]
+[INFO][2016-02-27 10:43:07,552][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000108: Foreign keys: [fk_qqsb57hntt6y7rgxpyv193hro]
+[INFO][2016-02-27 10:43:07,552][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000126: Indexes: [fk_qqsb57hntt6y7rgxpyv193hro, primary]
+[INFO][2016-02-27 10:43:07,568][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000261: Table found: cool_hotel.torganization_tresource
+[INFO][2016-02-27 10:43:07,568][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000037: Columns: [tresource_id, torganization_id]
+[INFO][2016-02-27 10:43:07,568][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000108: Foreign keys: [fk_sumqrlo172d24o0h8rf1buqc6, fk_pn8e59lvj1b3tw6c5el9px7rw]
+[INFO][2016-02-27 10:43:07,568][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000126: Indexes: [fk_sumqrlo172d24o0h8rf1buqc6, fk_pn8e59lvj1b3tw6c5el9px7rw, primary]
+[INFO][2016-02-27 10:43:07,584][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000261: Table found: cool_hotel.tresource
+[INFO][2016-02-27 10:43:07,584][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000037: Columns: [updatedatetime, id, tresourcetype_id, description, name, target, seq, tresource_id, createdatetime, url, iconcls]
+[INFO][2016-02-27 10:43:07,584][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000108: Foreign keys: [fk_givl2cl1b219fbu0v8ydo72te, fk_hujigsbsqxao04bgjum7k23ig]
+[INFO][2016-02-27 10:43:07,584][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000126: Indexes: [fk_givl2cl1b219fbu0v8ydo72te, fk_hujigsbsqxao04bgjum7k23ig, primary]
+[INFO][2016-02-27 10:43:07,599][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000261: Table found: cool_hotel.tresourcetype
+[INFO][2016-02-27 10:43:07,599][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000037: Columns: [updatedatetime, id, description, name, createdatetime]
+[INFO][2016-02-27 10:43:07,599][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000108: Foreign keys: []
+[INFO][2016-02-27 10:43:07,599][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000126: Indexes: [primary]
+[INFO][2016-02-27 10:43:07,615][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000261: Table found: cool_hotel.trole
+[INFO][2016-02-27 10:43:07,615][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000037: Columns: [updatedatetime, id, description, name, seq, createdatetime, iconcls]
+[INFO][2016-02-27 10:43:07,615][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000108: Foreign keys: []
+[INFO][2016-02-27 10:43:07,615][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000126: Indexes: [primary]
+[INFO][2016-02-27 10:43:07,630][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000261: Table found: cool_hotel.trole_tresource
+[INFO][2016-02-27 10:43:07,630][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000037: Columns: [trole_id, tresource_id]
+[INFO][2016-02-27 10:43:07,630][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000108: Foreign keys: [fk_rnj9t5lx9ngqnioc3kw49uhm1, fk_1ill8lguabbf2apj4ve5960o6]
+[INFO][2016-02-27 10:43:07,630][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000126: Indexes: [primary, fk_rnj9t5lx9ngqnioc3kw49uhm1, fk_1ill8lguabbf2apj4ve5960o6]
+[INFO][2016-02-27 10:43:07,646][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000261: Table found: cool_hotel.troom
+[INFO][2016-02-27 10:43:07,646][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000037: Columns: [updatedatetime, id, roomproperty, roomcancancel, roomname, createdatetime, roomstatus, roomprice, photo, roomnum]
+[INFO][2016-02-27 10:43:07,646][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000108: Foreign keys: []
+[INFO][2016-02-27 10:43:07,646][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000126: Indexes: [primary]
+[INFO][2016-02-27 10:43:07,662][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000261: Table found: cool_hotel.tuser
+[INFO][2016-02-27 10:43:07,662][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000037: Columns: [updatedatetime, id, loginname, sex, pwd, name, age, createdatetime, photo]
+[INFO][2016-02-27 10:43:07,662][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000108: Foreign keys: []
+[INFO][2016-02-27 10:43:07,662][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000126: Indexes: [primary]
+[INFO][2016-02-27 10:43:07,708][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000261: Table found: cool_hotel.tuser_torganization
+[INFO][2016-02-27 10:43:07,708][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000037: Columns: [torganization_id, tuser_id]
+[INFO][2016-02-27 10:43:07,708][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000108: Foreign keys: [fk_p5n9t5ypeafn30gjit4s0c2e1, fk_gdqjklqr9ob6fa0cnoqkjc4ok]
+[INFO][2016-02-27 10:43:07,708][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000126: Indexes: [fk_p5n9t5ypeafn30gjit4s0c2e1, fk_gdqjklqr9ob6fa0cnoqkjc4ok, primary]
+[INFO][2016-02-27 10:43:07,724][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000261: Table found: cool_hotel.tuser_trole
+[INFO][2016-02-27 10:43:07,724][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000037: Columns: [trole_id, tuser_id]
+[INFO][2016-02-27 10:43:07,724][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000108: Foreign keys: [fk_2gb56nnc2hjnphnfuinf9mspt, fk_8g3waitd93emrkb1sb4ue682l]
+[INFO][2016-02-27 10:43:07,724][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000126: Indexes: [fk_2gb56nnc2hjnphnfuinf9mspt, fk_8g3waitd93emrkb1sb4ue682l, primary]
+[INFO][2016-02-27 10:43:07,724][org.hibernate.tool.hbm2ddl.SchemaUpdate]HHH000232: Schema update complete
+[INFO][2016-02-27 10:43:07,863][org.springframework.orm.hibernate4.HibernateTransactionManager]Using DataSource [{
+	CreateTime:"2016-02-27 10:43:05",
+	ActiveCount:0,
+	PoolingCount:1,
+	CreateCount:1,
+	DestroyCount:0,
+	CloseCount:2,
+	ConnectCount:2,
+	Connections:[
+		{ID:938693931, ConnectTime:"2016-02-27 10:43:06", UseCount:2, LastActiveTime:"2016-02-27 10:43:07"}
+	]
+}] of Hibernate SessionFactory for HibernateTransactionManager
+[INFO][2016-02-27 10:43:08,050][nill.service.impl.UserServiceImpl] this is spring test will into the Spring
+[INFO][2016-02-27 10:43:08,424][org.springframework.test.context.transaction.TransactionalTestExecutionListener]Began transaction (1): transaction manager [org.springframework.orm.hibernate4.HibernateTransactionManager@75086505]; rollback [true]
+[INFO][2016-02-27 10:43:08,612][org.springframework.test.context.transaction.TransactionalTestExecutionListener]Rolled back transaction after test execution for test context [TestContext@6ab1b298 testClass = TestSpringHibernate, testInstance = nill.test.TestSpringHibernate@38444fe1, testMethod = test2@TestSpringHibernate, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@cd859a3 testClass = TestSpringHibernate, locations = '{classpath:spring.xml, classpath:spring-hibernate.xml, classpath:spring-druid.xml}', classes = '{}', contextInitializerClasses = '[]', activeProfiles = '{}', contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]]
+[INFO][2016-02-27 10:43:08,627][org.springframework.context.support.GenericApplicationContext]Closing org.springframework.context.support.GenericApplicationContext@17b90c55: startup date [Sat Feb 27 10:43:04 CST 2016]; root of context hierarchy
+[INFO][2016-02-27 10:43:08,627][org.springframework.beans.factory.support.DefaultListableBeanFactory]Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@34de727a: defining beans [org.springframework.beans.factory.config.PropertyPlaceholderConfigurer#0,baseDaoImpl,baseServiceImpl,initServiceImpl,bookingServiceImpl,onlineServiceImpl,organizationServiceImpl,resourceServiceImpl,roleServiceImplmpl,roomServiceImpl,rresourcetypeServiceImpl,userServiceImpl,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.internalPersistenceAnnotationProcessor,dataSource,sessionFactory,transactionManager,transactionAdvice,org.springframework.aop.config.internalAutoProxyCreator,transactionPointcut,org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0,druid-stat-interceptor,druid-stat-pointcut,org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#1,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor]; root of factory hierarchy
+[INFO][2016-02-27 10:43:08,643][com.alibaba.druid.pool.DruidDataSource]{dataSource-1} closed
+[INFO][2016-02-27 10:48:33,510][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from class path resource [spring.xml]
+[INFO][2016-02-27 10:48:33,854][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from class path resource [spring-hibernate.xml]
+[INFO][2016-02-27 10:48:33,964][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from class path resource [spring-druid.xml]
+[INFO][2016-02-27 10:48:34,010][org.springframework.context.support.GenericApplicationContext]Refreshing org.springframework.context.support.GenericApplicationContext@17b90c55: startup date [Sat Feb 27 10:48:34 CST 2016]; root of context hierarchy
+[INFO][2016-02-27 10:48:34,260][org.springframework.beans.factory.config.PropertyPlaceholderConfigurer]Loading properties file from class path resource [config.properties]
+[INFO][2016-02-27 10:48:34,322][org.springframework.beans.factory.support.DefaultListableBeanFactory]Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@34de727a: defining beans [org.springframework.beans.factory.config.PropertyPlaceholderConfigurer#0,baseDaoImpl,baseServiceImpl,initServiceImpl,bookingServiceImpl,onlineServiceImpl,organizationServiceImpl,resourceServiceImpl,roleServiceImplmpl,roomServiceImpl,rresourcetypeServiceImpl,userServiceImpl,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.internalPersistenceAnnotationProcessor,dataSource,sessionFactory,transactionManager,transactionAdvice,org.springframework.aop.config.internalAutoProxyCreator,transactionPointcut,org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0,druid-stat-interceptor,druid-stat-pointcut,org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#1,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor]; root of factory hierarchy
+[ERROR][2016-02-27 10:48:34,790][com.alibaba.druid.pool.DruidAbstractDataSource]maxIdle is deprecated
+[INFO][2016-02-27 10:48:34,932][com.alibaba.druid.pool.DruidDataSource]{dataSource-1} inited
+[INFO][2016-02-27 10:48:35,275][org.hibernate.annotations.common.Version]HCANN000001: Hibernate Commons Annotations {4.0.2.Final}
+[INFO][2016-02-27 10:48:35,291][org.hibernate.Version]HHH000412: Hibernate Core {4.2.7.SP1}
+[INFO][2016-02-27 10:48:35,291][org.hibernate.cfg.Environment]HHH000206: hibernate.properties not found
+[INFO][2016-02-27 10:48:35,291][org.hibernate.cfg.Environment]HHH000021: Bytecode provider name : javassist
+[INFO][2016-02-27 10:48:35,774][org.hibernate.dialect.Dialect]HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+[INFO][2016-02-27 10:48:36,071][org.hibernate.engine.transaction.internal.TransactionFactoryInitiator]HHH000399: Using default transaction strategy (direct JDBC transactions)
+[INFO][2016-02-27 10:48:36,071][org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory]HHH000397: Using ASTQueryTranslatorFactory
+[INFO][2016-02-27 10:48:36,465][org.hibernate.tool.hbm2ddl.SchemaUpdate]HHH000228: Running hbm2ddl schema update
+[INFO][2016-02-27 10:48:36,465][org.hibernate.tool.hbm2ddl.SchemaUpdate]HHH000102: Fetching database metadata
+[INFO][2016-02-27 10:48:36,465][org.hibernate.tool.hbm2ddl.SchemaUpdate]HHH000396: Updating schema
+[INFO][2016-02-27 10:48:36,496][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000261: Table found: cool_hotel.tbookinguser
+[INFO][2016-02-27 10:48:36,496][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000037: Columns: [indate, updatedatetime, id, roomcount, phone, email, name, createdatetime, outdate]
+[INFO][2016-02-27 10:48:36,496][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000108: Foreign keys: []
+[INFO][2016-02-27 10:48:36,496][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000126: Indexes: [primary]
+[INFO][2016-02-27 10:48:36,512][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000261: Table found: cool_hotel.tonline
+[INFO][2016-02-27 10:48:36,512][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000037: Columns: [id, loginname, createdatetime, type, ip]
+[INFO][2016-02-27 10:48:36,512][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000108: Foreign keys: []
+[INFO][2016-02-27 10:48:36,512][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000126: Indexes: [primary]
+[INFO][2016-02-27 10:48:36,527][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000261: Table found: cool_hotel.torganization
+[INFO][2016-02-27 10:48:36,527][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000037: Columns: [updatedatetime, id, address, name, seq, createdatetime, torganization_id, code, iconcls]
+[INFO][2016-02-27 10:48:36,527][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000108: Foreign keys: [fk_qqsb57hntt6y7rgxpyv193hro]
+[INFO][2016-02-27 10:48:36,527][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000126: Indexes: [fk_qqsb57hntt6y7rgxpyv193hro, primary]
+[INFO][2016-02-27 10:48:36,543][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000261: Table found: cool_hotel.torganization_tresource
+[INFO][2016-02-27 10:48:36,543][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000037: Columns: [tresource_id, torganization_id]
+[INFO][2016-02-27 10:48:36,543][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000108: Foreign keys: [fk_sumqrlo172d24o0h8rf1buqc6, fk_pn8e59lvj1b3tw6c5el9px7rw]
+[INFO][2016-02-27 10:48:36,543][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000126: Indexes: [fk_sumqrlo172d24o0h8rf1buqc6, fk_pn8e59lvj1b3tw6c5el9px7rw, primary]
+[INFO][2016-02-27 10:48:36,558][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000261: Table found: cool_hotel.tresource
+[INFO][2016-02-27 10:48:36,558][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000037: Columns: [updatedatetime, id, tresourcetype_id, description, name, target, seq, tresource_id, createdatetime, url, iconcls]
+[INFO][2016-02-27 10:48:36,558][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000108: Foreign keys: [fk_givl2cl1b219fbu0v8ydo72te, fk_hujigsbsqxao04bgjum7k23ig]
+[INFO][2016-02-27 10:48:36,558][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000126: Indexes: [fk_givl2cl1b219fbu0v8ydo72te, fk_hujigsbsqxao04bgjum7k23ig, primary]
+[INFO][2016-02-27 10:48:36,574][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000261: Table found: cool_hotel.tresourcetype
+[INFO][2016-02-27 10:48:36,574][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000037: Columns: [updatedatetime, id, description, name, createdatetime]
+[INFO][2016-02-27 10:48:36,574][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000108: Foreign keys: []
+[INFO][2016-02-27 10:48:36,574][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000126: Indexes: [primary]
+[INFO][2016-02-27 10:48:36,590][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000261: Table found: cool_hotel.trole
+[INFO][2016-02-27 10:48:36,590][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000037: Columns: [updatedatetime, id, description, name, seq, createdatetime, iconcls]
+[INFO][2016-02-27 10:48:36,590][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000108: Foreign keys: []
+[INFO][2016-02-27 10:48:36,590][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000126: Indexes: [primary]
+[INFO][2016-02-27 10:48:36,605][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000261: Table found: cool_hotel.trole_tresource
+[INFO][2016-02-27 10:48:36,605][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000037: Columns: [trole_id, tresource_id]
+[INFO][2016-02-27 10:48:36,605][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000108: Foreign keys: [fk_rnj9t5lx9ngqnioc3kw49uhm1, fk_1ill8lguabbf2apj4ve5960o6]
+[INFO][2016-02-27 10:48:36,605][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000126: Indexes: [primary, fk_rnj9t5lx9ngqnioc3kw49uhm1, fk_1ill8lguabbf2apj4ve5960o6]
+[INFO][2016-02-27 10:48:36,621][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000261: Table found: cool_hotel.troom
+[INFO][2016-02-27 10:48:36,621][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000037: Columns: [updatedatetime, id, roomproperty, roomcancancel, roomname, createdatetime, roomstatus, roomprice, photo, roomnum]
+[INFO][2016-02-27 10:48:36,621][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000108: Foreign keys: []
+[INFO][2016-02-27 10:48:36,621][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000126: Indexes: [primary]
+[INFO][2016-02-27 10:48:36,636][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000261: Table found: cool_hotel.tuser
+[INFO][2016-02-27 10:48:36,636][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000037: Columns: [updatedatetime, id, loginname, sex, pwd, name, age, createdatetime, photo]
+[INFO][2016-02-27 10:48:36,636][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000108: Foreign keys: []
+[INFO][2016-02-27 10:48:36,636][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000126: Indexes: [primary]
+[INFO][2016-02-27 10:48:36,668][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000261: Table found: cool_hotel.tuser_torganization
+[INFO][2016-02-27 10:48:36,668][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000037: Columns: [torganization_id, tuser_id]
+[INFO][2016-02-27 10:48:36,668][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000108: Foreign keys: [fk_p5n9t5ypeafn30gjit4s0c2e1, fk_gdqjklqr9ob6fa0cnoqkjc4ok]
+[INFO][2016-02-27 10:48:36,668][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000126: Indexes: [fk_p5n9t5ypeafn30gjit4s0c2e1, fk_gdqjklqr9ob6fa0cnoqkjc4ok, primary]
+[INFO][2016-02-27 10:48:36,668][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000261: Table found: cool_hotel.tuser_trole
+[INFO][2016-02-27 10:48:36,668][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000037: Columns: [trole_id, tuser_id]
+[INFO][2016-02-27 10:48:36,683][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000108: Foreign keys: [fk_2gb56nnc2hjnphnfuinf9mspt, fk_8g3waitd93emrkb1sb4ue682l]
+[INFO][2016-02-27 10:48:36,683][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000126: Indexes: [fk_2gb56nnc2hjnphnfuinf9mspt, fk_8g3waitd93emrkb1sb4ue682l, primary]
+[INFO][2016-02-27 10:48:36,683][org.hibernate.tool.hbm2ddl.SchemaUpdate]HHH000232: Schema update complete
+[INFO][2016-02-27 10:48:36,824][org.springframework.orm.hibernate4.HibernateTransactionManager]Using DataSource [{
+	CreateTime:"2016-02-27 10:48:34",
+	ActiveCount:0,
+	PoolingCount:1,
+	CreateCount:1,
+	DestroyCount:0,
+	CloseCount:2,
+	ConnectCount:2,
+	Connections:[
+		{ID:323487415, ConnectTime:"2016-02-27 10:48:35", UseCount:2, LastActiveTime:"2016-02-27 10:48:36"}
+	]
+}] of Hibernate SessionFactory for HibernateTransactionManager
+[INFO][2016-02-27 10:48:37,026][nill.service.impl.UserServiceImpl] this is spring test will into the Spring
+[INFO][2016-02-27 10:48:37,292][org.springframework.test.context.transaction.TransactionalTestExecutionListener]Began transaction (1): transaction manager [org.springframework.orm.hibernate4.HibernateTransactionManager@47650a79]; rollback [true]
+[INFO][2016-02-27 10:48:37,511][org.springframework.test.context.transaction.TransactionalTestExecutionListener]Rolled back transaction after test execution for test context [TestContext@38444fe1 testClass = TestSpringHibernate, testInstance = nill.test.TestSpringHibernate@cd859a3, testMethod = test2@TestSpringHibernate, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@4fe4e2eb testClass = TestSpringHibernate, locations = '{classpath:spring.xml, classpath:spring-hibernate.xml, classpath:spring-druid.xml}', classes = '{}', contextInitializerClasses = '[]', activeProfiles = '{}', contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]]
+[INFO][2016-02-27 10:48:37,511][org.springframework.context.support.GenericApplicationContext]Closing org.springframework.context.support.GenericApplicationContext@17b90c55: startup date [Sat Feb 27 10:48:34 CST 2016]; root of context hierarchy
+[INFO][2016-02-27 10:48:37,511][org.springframework.beans.factory.support.DefaultListableBeanFactory]Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@34de727a: defining beans [org.springframework.beans.factory.config.PropertyPlaceholderConfigurer#0,baseDaoImpl,baseServiceImpl,initServiceImpl,bookingServiceImpl,onlineServiceImpl,organizationServiceImpl,resourceServiceImpl,roleServiceImplmpl,roomServiceImpl,rresourcetypeServiceImpl,userServiceImpl,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.internalPersistenceAnnotationProcessor,dataSource,sessionFactory,transactionManager,transactionAdvice,org.springframework.aop.config.internalAutoProxyCreator,transactionPointcut,org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0,druid-stat-interceptor,druid-stat-pointcut,org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#1,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor]; root of factory hierarchy
+[INFO][2016-02-27 10:48:37,527][com.alibaba.druid.pool.DruidDataSource]{dataSource-1} closed
+[INFO][2016-02-27 10:51:00,892][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from class path resource [spring.xml]
+[INFO][2016-02-27 10:51:01,221][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from class path resource [spring-hibernate.xml]
+[INFO][2016-02-27 10:51:01,330][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from class path resource [spring-druid.xml]
+[INFO][2016-02-27 10:51:01,377][org.springframework.context.support.GenericApplicationContext]Refreshing org.springframework.context.support.GenericApplicationContext@5e9815f3: startup date [Sat Feb 27 10:51:01 CST 2016]; root of context hierarchy
+[INFO][2016-02-27 10:51:01,611][org.springframework.beans.factory.config.PropertyPlaceholderConfigurer]Loading properties file from class path resource [config.properties]
+[INFO][2016-02-27 10:51:01,689][org.springframework.beans.factory.support.DefaultListableBeanFactory]Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@5dbc21b2: defining beans [org.springframework.beans.factory.config.PropertyPlaceholderConfigurer#0,baseDaoImpl,baseServiceImpl,initServiceImpl,bookingServiceImpl,onlineServiceImpl,organizationServiceImpl,resourceServiceImpl,roleServiceImplmpl,roomServiceImpl,rresourcetypeServiceImpl,userServiceImpl,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.internalPersistenceAnnotationProcessor,dataSource,sessionFactory,transactionManager,transactionAdvice,org.springframework.aop.config.internalAutoProxyCreator,transactionPointcut,org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0,druid-stat-interceptor,druid-stat-pointcut,org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#1,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor]; root of factory hierarchy
+[ERROR][2016-02-27 10:51:02,110][com.alibaba.druid.pool.DruidAbstractDataSource]maxIdle is deprecated
+[INFO][2016-02-27 10:51:02,253][com.alibaba.druid.pool.DruidDataSource]{dataSource-1} inited
+[INFO][2016-02-27 10:51:02,643][org.hibernate.annotations.common.Version]HCANN000001: Hibernate Commons Annotations {4.0.2.Final}
+[INFO][2016-02-27 10:51:02,643][org.hibernate.Version]HHH000412: Hibernate Core {4.2.7.SP1}
+[INFO][2016-02-27 10:51:02,643][org.hibernate.cfg.Environment]HHH000206: hibernate.properties not found
+[INFO][2016-02-27 10:51:02,643][org.hibernate.cfg.Environment]HHH000021: Bytecode provider name : javassist
+[INFO][2016-02-27 10:51:03,079][org.hibernate.dialect.Dialect]HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+[INFO][2016-02-27 10:51:03,345][org.hibernate.engine.transaction.internal.TransactionFactoryInitiator]HHH000399: Using default transaction strategy (direct JDBC transactions)
+[INFO][2016-02-27 10:51:03,345][org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory]HHH000397: Using ASTQueryTranslatorFactory
+[INFO][2016-02-27 10:51:03,736][org.hibernate.tool.hbm2ddl.SchemaUpdate]HHH000228: Running hbm2ddl schema update
+[INFO][2016-02-27 10:51:03,736][org.hibernate.tool.hbm2ddl.SchemaUpdate]HHH000102: Fetching database metadata
+[INFO][2016-02-27 10:51:03,736][org.hibernate.tool.hbm2ddl.SchemaUpdate]HHH000396: Updating schema
+[INFO][2016-02-27 10:51:03,782][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000261: Table found: cool_hotel.tbookinguser
+[INFO][2016-02-27 10:51:03,782][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000037: Columns: [indate, updatedatetime, id, roomcount, phone, email, name, createdatetime, outdate]
+[INFO][2016-02-27 10:51:03,782][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000108: Foreign keys: []
+[INFO][2016-02-27 10:51:03,782][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000126: Indexes: [primary]
+[INFO][2016-02-27 10:51:03,782][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000261: Table found: cool_hotel.tonline
+[INFO][2016-02-27 10:51:03,782][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000037: Columns: [id, loginname, createdatetime, type, ip]
+[INFO][2016-02-27 10:51:03,782][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000108: Foreign keys: []
+[INFO][2016-02-27 10:51:03,782][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000126: Indexes: [primary]
+[INFO][2016-02-27 10:51:03,798][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000261: Table found: cool_hotel.torganization
+[INFO][2016-02-27 10:51:03,798][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000037: Columns: [updatedatetime, id, address, name, seq, createdatetime, torganization_id, code, iconcls]
+[INFO][2016-02-27 10:51:03,798][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000108: Foreign keys: [fk_qqsb57hntt6y7rgxpyv193hro]
+[INFO][2016-02-27 10:51:03,798][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000126: Indexes: [fk_qqsb57hntt6y7rgxpyv193hro, primary]
+[INFO][2016-02-27 10:51:03,814][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000261: Table found: cool_hotel.torganization_tresource
+[INFO][2016-02-27 10:51:03,814][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000037: Columns: [tresource_id, torganization_id]
+[INFO][2016-02-27 10:51:03,814][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000108: Foreign keys: [fk_sumqrlo172d24o0h8rf1buqc6, fk_pn8e59lvj1b3tw6c5el9px7rw]
+[INFO][2016-02-27 10:51:03,814][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000126: Indexes: [fk_sumqrlo172d24o0h8rf1buqc6, fk_pn8e59lvj1b3tw6c5el9px7rw, primary]
+[INFO][2016-02-27 10:51:03,829][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000261: Table found: cool_hotel.tresource
+[INFO][2016-02-27 10:51:03,829][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000037: Columns: [updatedatetime, id, tresourcetype_id, description, name, target, seq, tresource_id, createdatetime, url, iconcls]
+[INFO][2016-02-27 10:51:03,829][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000108: Foreign keys: [fk_givl2cl1b219fbu0v8ydo72te, fk_hujigsbsqxao04bgjum7k23ig]
+[INFO][2016-02-27 10:51:03,829][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000126: Indexes: [fk_givl2cl1b219fbu0v8ydo72te, fk_hujigsbsqxao04bgjum7k23ig, primary]
+[INFO][2016-02-27 10:51:03,845][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000261: Table found: cool_hotel.tresourcetype
+[INFO][2016-02-27 10:51:03,845][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000037: Columns: [updatedatetime, id, description, name, createdatetime]
+[INFO][2016-02-27 10:51:03,845][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000108: Foreign keys: []
+[INFO][2016-02-27 10:51:03,845][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000126: Indexes: [primary]
+[INFO][2016-02-27 10:51:03,860][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000261: Table found: cool_hotel.trole
+[INFO][2016-02-27 10:51:03,860][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000037: Columns: [updatedatetime, id, description, name, seq, createdatetime, iconcls]
+[INFO][2016-02-27 10:51:03,860][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000108: Foreign keys: []
+[INFO][2016-02-27 10:51:03,860][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000126: Indexes: [primary]
+[INFO][2016-02-27 10:51:03,860][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000261: Table found: cool_hotel.trole_tresource
+[INFO][2016-02-27 10:51:03,860][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000037: Columns: [trole_id, tresource_id]
+[INFO][2016-02-27 10:51:03,860][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000108: Foreign keys: [fk_rnj9t5lx9ngqnioc3kw49uhm1, fk_1ill8lguabbf2apj4ve5960o6]
+[INFO][2016-02-27 10:51:03,860][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000126: Indexes: [primary, fk_rnj9t5lx9ngqnioc3kw49uhm1, fk_1ill8lguabbf2apj4ve5960o6]
+[INFO][2016-02-27 10:51:03,876][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000261: Table found: cool_hotel.troom
+[INFO][2016-02-27 10:51:03,876][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000037: Columns: [updatedatetime, id, roomproperty, roomcancancel, roomname, createdatetime, roomstatus, roomprice, photo, roomnum]
+[INFO][2016-02-27 10:51:03,876][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000108: Foreign keys: []
+[INFO][2016-02-27 10:51:03,876][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000126: Indexes: [primary]
+[INFO][2016-02-27 10:51:03,892][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000261: Table found: cool_hotel.tuser
+[INFO][2016-02-27 10:51:03,892][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000037: Columns: [updatedatetime, id, loginname, sex, pwd, name, age, createdatetime, photo]
+[INFO][2016-02-27 10:51:03,892][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000108: Foreign keys: []
+[INFO][2016-02-27 10:51:03,892][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000126: Indexes: [primary]
+[INFO][2016-02-27 10:51:03,923][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000261: Table found: cool_hotel.tuser_torganization
+[INFO][2016-02-27 10:51:03,923][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000037: Columns: [torganization_id, tuser_id]
+[INFO][2016-02-27 10:51:03,923][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000108: Foreign keys: [fk_p5n9t5ypeafn30gjit4s0c2e1, fk_gdqjklqr9ob6fa0cnoqkjc4ok]
+[INFO][2016-02-27 10:51:03,923][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000126: Indexes: [fk_p5n9t5ypeafn30gjit4s0c2e1, fk_gdqjklqr9ob6fa0cnoqkjc4ok, primary]
+[INFO][2016-02-27 10:51:03,923][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000261: Table found: cool_hotel.tuser_trole
+[INFO][2016-02-27 10:51:03,923][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000037: Columns: [trole_id, tuser_id]
+[INFO][2016-02-27 10:51:03,923][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000108: Foreign keys: [fk_2gb56nnc2hjnphnfuinf9mspt, fk_8g3waitd93emrkb1sb4ue682l]
+[INFO][2016-02-27 10:51:03,923][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000126: Indexes: [fk_2gb56nnc2hjnphnfuinf9mspt, fk_8g3waitd93emrkb1sb4ue682l, primary]
+[INFO][2016-02-27 10:51:03,938][org.hibernate.tool.hbm2ddl.SchemaUpdate]HHH000232: Schema update complete
+[INFO][2016-02-27 10:51:04,094][org.springframework.orm.hibernate4.HibernateTransactionManager]Using DataSource [{
+	CreateTime:"2016-02-27 10:51:02",
+	ActiveCount:0,
+	PoolingCount:1,
+	CreateCount:1,
+	DestroyCount:0,
+	CloseCount:2,
+	ConnectCount:2,
+	Connections:[
+		{ID:1967435296, ConnectTime:"2016-02-27 10:51:03", UseCount:2, LastActiveTime:"2016-02-27 10:51:03"}
+	]
+}] of Hibernate SessionFactory for HibernateTransactionManager
+[INFO][2016-02-27 10:51:04,313][nill.service.impl.UserServiceImpl] this is spring test will into the Spring
+[INFO][2016-02-27 10:51:04,578][org.springframework.test.context.transaction.TransactionalTestExecutionListener]Began transaction (1): transaction manager [org.springframework.orm.hibernate4.HibernateTransactionManager@701070e9]; rollback [true]
+[INFO][2016-02-27 10:51:04,782][org.springframework.test.context.transaction.TransactionalTestExecutionListener]Rolled back transaction after test execution for test context [TestContext@4fe4e2eb testClass = TestSpringHibernate, testInstance = nill.test.TestSpringHibernate@3beddb47, testMethod = test2@TestSpringHibernate, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@7cd7310d testClass = TestSpringHibernate, locations = '{classpath:spring.xml, classpath:spring-hibernate.xml, classpath:spring-druid.xml}', classes = '{}', contextInitializerClasses = '[]', activeProfiles = '{}', contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]]
+[INFO][2016-02-27 10:51:04,797][org.springframework.context.support.GenericApplicationContext]Closing org.springframework.context.support.GenericApplicationContext@5e9815f3: startup date [Sat Feb 27 10:51:01 CST 2016]; root of context hierarchy
+[INFO][2016-02-27 10:51:04,797][org.springframework.beans.factory.support.DefaultListableBeanFactory]Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@5dbc21b2: defining beans [org.springframework.beans.factory.config.PropertyPlaceholderConfigurer#0,baseDaoImpl,baseServiceImpl,initServiceImpl,bookingServiceImpl,onlineServiceImpl,organizationServiceImpl,resourceServiceImpl,roleServiceImplmpl,roomServiceImpl,rresourcetypeServiceImpl,userServiceImpl,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.internalPersistenceAnnotationProcessor,dataSource,sessionFactory,transactionManager,transactionAdvice,org.springframework.aop.config.internalAutoProxyCreator,transactionPointcut,org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0,druid-stat-interceptor,druid-stat-pointcut,org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#1,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor]; root of factory hierarchy
+[INFO][2016-02-27 10:51:04,813][com.alibaba.druid.pool.DruidDataSource]{dataSource-1} closed
+[INFO][2016-02-27 11:03:49,139][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from class path resource [spring.xml]
+[INFO][2016-02-27 11:03:49,389][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from class path resource [spring-hibernate.xml]
+[INFO][2016-02-27 11:03:49,483][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from class path resource [spring-druid.xml]
+[INFO][2016-02-27 11:03:49,514][org.springframework.context.support.GenericApplicationContext]Refreshing org.springframework.context.support.GenericApplicationContext@75d8ac9d: startup date [Sat Feb 27 11:03:49 CST 2016]; root of context hierarchy
+[INFO][2016-02-27 11:03:49,748][org.springframework.beans.factory.config.PropertyPlaceholderConfigurer]Loading properties file from class path resource [config.properties]
+[INFO][2016-02-27 11:03:49,795][org.springframework.beans.factory.support.DefaultListableBeanFactory]Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@449b369: defining beans [org.springframework.beans.factory.config.PropertyPlaceholderConfigurer#0,baseDaoImpl,baseServiceImpl,initServiceImpl,bookingServiceImpl,onlineServiceImpl,organizationServiceImpl,resourceServiceImpl,roleServiceImplmpl,roomServiceImpl,rresourcetypeServiceImpl,userServiceImpl,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.internalPersistenceAnnotationProcessor,dataSource,sessionFactory,transactionManager,transactionAdvice,org.springframework.aop.config.internalAutoProxyCreator,transactionPointcut,org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0,druid-stat-interceptor,druid-stat-pointcut,org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#1,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor]; root of factory hierarchy
+[ERROR][2016-02-27 11:03:50,153][com.alibaba.druid.pool.DruidAbstractDataSource]maxIdle is deprecated
+[INFO][2016-02-27 11:03:50,264][com.alibaba.druid.pool.DruidDataSource]{dataSource-1} inited
+[INFO][2016-02-27 11:03:50,560][org.hibernate.annotations.common.Version]HCANN000001: Hibernate Commons Annotations {4.0.2.Final}
+[INFO][2016-02-27 11:03:50,576][org.hibernate.Version]HHH000412: Hibernate Core {4.2.7.SP1}
+[INFO][2016-02-27 11:03:50,576][org.hibernate.cfg.Environment]HHH000206: hibernate.properties not found
+[INFO][2016-02-27 11:03:50,576][org.hibernate.cfg.Environment]HHH000021: Bytecode provider name : javassist
+[INFO][2016-02-27 11:03:50,919][org.hibernate.dialect.Dialect]HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+[INFO][2016-02-27 11:03:51,137][org.hibernate.engine.transaction.internal.TransactionFactoryInitiator]HHH000399: Using default transaction strategy (direct JDBC transactions)
+[INFO][2016-02-27 11:03:51,137][org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory]HHH000397: Using ASTQueryTranslatorFactory
+[INFO][2016-02-27 11:03:51,496][org.hibernate.tool.hbm2ddl.SchemaUpdate]HHH000228: Running hbm2ddl schema update
+[INFO][2016-02-27 11:03:51,496][org.hibernate.tool.hbm2ddl.SchemaUpdate]HHH000102: Fetching database metadata
+[INFO][2016-02-27 11:03:51,496][org.hibernate.tool.hbm2ddl.SchemaUpdate]HHH000396: Updating schema
+[INFO][2016-02-27 11:03:51,527][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000261: Table found: cool_hotel.tbookinguser
+[INFO][2016-02-27 11:03:51,527][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000037: Columns: [indate, updatedatetime, id, roomcount, phone, email, name, createdatetime, outdate]
+[INFO][2016-02-27 11:03:51,528][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000108: Foreign keys: []
+[INFO][2016-02-27 11:03:51,528][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000126: Indexes: [primary]
+[INFO][2016-02-27 11:03:51,528][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000261: Table found: cool_hotel.tonline
+[INFO][2016-02-27 11:03:51,528][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000037: Columns: [id, loginname, createdatetime, type, ip]
+[INFO][2016-02-27 11:03:51,528][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000108: Foreign keys: []
+[INFO][2016-02-27 11:03:51,528][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000126: Indexes: [primary]
+[INFO][2016-02-27 11:03:51,544][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000261: Table found: cool_hotel.torganization
+[INFO][2016-02-27 11:03:51,544][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000037: Columns: [updatedatetime, id, address, name, seq, createdatetime, torganization_id, code, iconcls]
+[INFO][2016-02-27 11:03:51,544][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000108: Foreign keys: [fk_qqsb57hntt6y7rgxpyv193hro]
+[INFO][2016-02-27 11:03:51,544][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000126: Indexes: [fk_qqsb57hntt6y7rgxpyv193hro, primary]
+[INFO][2016-02-27 11:03:51,559][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000261: Table found: cool_hotel.torganization_tresource
+[INFO][2016-02-27 11:03:51,559][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000037: Columns: [tresource_id, torganization_id]
+[INFO][2016-02-27 11:03:51,559][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000108: Foreign keys: [fk_sumqrlo172d24o0h8rf1buqc6, fk_pn8e59lvj1b3tw6c5el9px7rw]
+[INFO][2016-02-27 11:03:51,559][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000126: Indexes: [fk_sumqrlo172d24o0h8rf1buqc6, fk_pn8e59lvj1b3tw6c5el9px7rw, primary]
+[INFO][2016-02-27 11:03:51,575][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000261: Table found: cool_hotel.tresource
+[INFO][2016-02-27 11:03:51,575][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000037: Columns: [updatedatetime, id, tresourcetype_id, description, name, target, seq, tresource_id, createdatetime, url, iconcls]
+[INFO][2016-02-27 11:03:51,575][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000108: Foreign keys: [fk_givl2cl1b219fbu0v8ydo72te, fk_hujigsbsqxao04bgjum7k23ig]
+[INFO][2016-02-27 11:03:51,575][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000126: Indexes: [fk_givl2cl1b219fbu0v8ydo72te, fk_hujigsbsqxao04bgjum7k23ig, primary]
+[INFO][2016-02-27 11:03:51,575][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000261: Table found: cool_hotel.tresourcetype
+[INFO][2016-02-27 11:03:51,575][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000037: Columns: [updatedatetime, id, description, name, createdatetime]
+[INFO][2016-02-27 11:03:51,575][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000108: Foreign keys: []
+[INFO][2016-02-27 11:03:51,575][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000126: Indexes: [primary]
+[INFO][2016-02-27 11:03:51,591][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000261: Table found: cool_hotel.trole
+[INFO][2016-02-27 11:03:51,591][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000037: Columns: [updatedatetime, id, description, name, seq, createdatetime, iconcls]
+[INFO][2016-02-27 11:03:51,591][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000108: Foreign keys: []
+[INFO][2016-02-27 11:03:51,591][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000126: Indexes: [primary]
+[INFO][2016-02-27 11:03:51,606][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000261: Table found: cool_hotel.trole_tresource
+[INFO][2016-02-27 11:03:51,606][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000037: Columns: [trole_id, tresource_id]
+[INFO][2016-02-27 11:03:51,606][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000108: Foreign keys: [fk_rnj9t5lx9ngqnioc3kw49uhm1, fk_1ill8lguabbf2apj4ve5960o6]
+[INFO][2016-02-27 11:03:51,606][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000126: Indexes: [primary, fk_rnj9t5lx9ngqnioc3kw49uhm1, fk_1ill8lguabbf2apj4ve5960o6]
+[INFO][2016-02-27 11:03:51,622][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000261: Table found: cool_hotel.troom
+[INFO][2016-02-27 11:03:51,622][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000037: Columns: [updatedatetime, id, roomproperty, roomcancancel, roomname, createdatetime, roomstatus, roomprice, photo, roomnum]
+[INFO][2016-02-27 11:03:51,622][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000108: Foreign keys: []
+[INFO][2016-02-27 11:03:51,622][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000126: Indexes: [primary]
+[INFO][2016-02-27 11:03:51,622][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000261: Table found: cool_hotel.tuser
+[INFO][2016-02-27 11:03:51,622][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000037: Columns: [updatedatetime, id, loginname, sex, pwd, name, age, createdatetime, photo]
+[INFO][2016-02-27 11:03:51,637][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000108: Foreign keys: []
+[INFO][2016-02-27 11:03:51,637][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000126: Indexes: [primary]
+[INFO][2016-02-27 11:03:51,637][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000261: Table found: cool_hotel.tuser_torganization
+[INFO][2016-02-27 11:03:51,637][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000037: Columns: [torganization_id, tuser_id]
+[INFO][2016-02-27 11:03:51,637][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000108: Foreign keys: [fk_p5n9t5ypeafn30gjit4s0c2e1, fk_gdqjklqr9ob6fa0cnoqkjc4ok]
+[INFO][2016-02-27 11:03:51,637][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000126: Indexes: [fk_p5n9t5ypeafn30gjit4s0c2e1, fk_gdqjklqr9ob6fa0cnoqkjc4ok, primary]
+[INFO][2016-02-27 11:03:51,653][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000261: Table found: cool_hotel.tuser_trole
+[INFO][2016-02-27 11:03:51,653][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000037: Columns: [trole_id, tuser_id]
+[INFO][2016-02-27 11:03:51,653][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000108: Foreign keys: [fk_2gb56nnc2hjnphnfuinf9mspt, fk_8g3waitd93emrkb1sb4ue682l]
+[INFO][2016-02-27 11:03:51,653][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000126: Indexes: [fk_2gb56nnc2hjnphnfuinf9mspt, fk_8g3waitd93emrkb1sb4ue682l, primary]
+[INFO][2016-02-27 11:03:51,653][org.hibernate.tool.hbm2ddl.SchemaUpdate]HHH000232: Schema update complete
+[INFO][2016-02-27 11:03:51,762][org.springframework.orm.hibernate4.HibernateTransactionManager]Using DataSource [{
+	CreateTime:"2016-02-27 11:03:50",
+	ActiveCount:0,
+	PoolingCount:1,
+	CreateCount:1,
+	DestroyCount:0,
+	CloseCount:2,
+	ConnectCount:2,
+	Connections:[
+		{ID:1214027455, ConnectTime:"2016-02-27 11:03:50", UseCount:2, LastActiveTime:"2016-02-27 11:03:51"}
+	]
+}] of Hibernate SessionFactory for HibernateTransactionManager
+[INFO][2016-02-27 11:03:51,918][nill.service.impl.UserServiceImpl] this is spring test will into the Spring
+[INFO][2016-02-27 11:03:52,183][org.springframework.test.context.transaction.TransactionalTestExecutionListener]Began transaction (1): transaction manager [org.springframework.orm.hibernate4.HibernateTransactionManager@7a206749]; rollback [true]
+[INFO][2016-02-27 11:03:52,355][org.springframework.test.context.transaction.TransactionalTestExecutionListener]Rolled back transaction after test execution for test context [TestContext@7587265a testClass = TestSpringHibernate, testInstance = nill.test.TestSpringHibernate@7be71afd, testMethod = test2@TestSpringHibernate, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@19d1798 testClass = TestSpringHibernate, locations = '{classpath:spring.xml, classpath:spring-hibernate.xml, classpath:spring-druid.xml}', classes = '{}', contextInitializerClasses = '[]', activeProfiles = '{}', contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]]
+[INFO][2016-02-27 11:03:52,355][org.springframework.context.support.GenericApplicationContext]Closing org.springframework.context.support.GenericApplicationContext@75d8ac9d: startup date [Sat Feb 27 11:03:49 CST 2016]; root of context hierarchy
+[INFO][2016-02-27 11:03:52,355][org.springframework.beans.factory.support.DefaultListableBeanFactory]Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@449b369: defining beans [org.springframework.beans.factory.config.PropertyPlaceholderConfigurer#0,baseDaoImpl,baseServiceImpl,initServiceImpl,bookingServiceImpl,onlineServiceImpl,organizationServiceImpl,resourceServiceImpl,roleServiceImplmpl,roomServiceImpl,rresourcetypeServiceImpl,userServiceImpl,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.internalPersistenceAnnotationProcessor,dataSource,sessionFactory,transactionManager,transactionAdvice,org.springframework.aop.config.internalAutoProxyCreator,transactionPointcut,org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0,druid-stat-interceptor,druid-stat-pointcut,org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#1,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor]; root of factory hierarchy
+[INFO][2016-02-27 11:03:52,371][com.alibaba.druid.pool.DruidDataSource]{dataSource-1} closed
+[INFO][2016-02-27 11:07:31,133][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from class path resource [spring.xml]
+[INFO][2016-02-27 11:07:31,414][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from class path resource [spring-hibernate.xml]
+[INFO][2016-02-27 11:07:31,524][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from class path resource [spring-druid.xml]
+[INFO][2016-02-27 11:07:31,570][org.springframework.context.support.GenericApplicationContext]Refreshing org.springframework.context.support.GenericApplicationContext@75d8ac9d: startup date [Sat Feb 27 11:07:31 CST 2016]; root of context hierarchy
+[INFO][2016-02-27 11:07:31,773][org.springframework.beans.factory.config.PropertyPlaceholderConfigurer]Loading properties file from class path resource [config.properties]
+[INFO][2016-02-27 11:07:31,820][org.springframework.beans.factory.support.DefaultListableBeanFactory]Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@34de727a: defining beans [org.springframework.beans.factory.config.PropertyPlaceholderConfigurer#0,baseDaoImpl,baseServiceImpl,initServiceImpl,bookingServiceImpl,onlineServiceImpl,organizationServiceImpl,resourceServiceImpl,roleServiceImplmpl,roomServiceImpl,rresourcetypeServiceImpl,userServiceImpl,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.internalPersistenceAnnotationProcessor,dataSource,sessionFactory,transactionManager,transactionAdvice,org.springframework.aop.config.internalAutoProxyCreator,transactionPointcut,org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0,druid-stat-interceptor,druid-stat-pointcut,org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#1,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor]; root of factory hierarchy
+[ERROR][2016-02-27 11:07:32,241][com.alibaba.druid.pool.DruidAbstractDataSource]maxIdle is deprecated
+[INFO][2016-02-27 11:07:32,351][com.alibaba.druid.pool.DruidDataSource]{dataSource-1} inited
+[INFO][2016-02-27 11:07:32,663][org.hibernate.annotations.common.Version]HCANN000001: Hibernate Commons Annotations {4.0.2.Final}
+[INFO][2016-02-27 11:07:32,663][org.hibernate.Version]HHH000412: Hibernate Core {4.2.7.SP1}
+[INFO][2016-02-27 11:07:32,663][org.hibernate.cfg.Environment]HHH000206: hibernate.properties not found
+[INFO][2016-02-27 11:07:32,679][org.hibernate.cfg.Environment]HHH000021: Bytecode provider name : javassist
+[INFO][2016-02-27 11:07:33,069][org.hibernate.dialect.Dialect]HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+[INFO][2016-02-27 11:07:33,303][org.hibernate.engine.transaction.internal.TransactionFactoryInitiator]HHH000399: Using default transaction strategy (direct JDBC transactions)
+[INFO][2016-02-27 11:07:33,319][org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory]HHH000397: Using ASTQueryTranslatorFactory
+[INFO][2016-02-27 11:07:33,632][org.hibernate.tool.hbm2ddl.SchemaUpdate]HHH000228: Running hbm2ddl schema update
+[INFO][2016-02-27 11:07:33,632][org.hibernate.tool.hbm2ddl.SchemaUpdate]HHH000102: Fetching database metadata
+[INFO][2016-02-27 11:07:33,632][org.hibernate.tool.hbm2ddl.SchemaUpdate]HHH000396: Updating schema
+[INFO][2016-02-27 11:07:33,663][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000261: Table found: cool_hotel.tbookinguser
+[INFO][2016-02-27 11:07:33,663][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000037: Columns: [indate, updatedatetime, id, roomcount, phone, email, name, createdatetime, outdate]
+[INFO][2016-02-27 11:07:33,663][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000108: Foreign keys: []
+[INFO][2016-02-27 11:07:33,663][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000126: Indexes: [primary]
+[INFO][2016-02-27 11:07:33,694][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000261: Table found: cool_hotel.tonline
+[INFO][2016-02-27 11:07:33,694][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000037: Columns: [id, loginname, createdatetime, type, ip]
+[INFO][2016-02-27 11:07:33,694][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000108: Foreign keys: []
+[INFO][2016-02-27 11:07:33,694][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000126: Indexes: [primary]
+[INFO][2016-02-27 11:07:33,710][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000261: Table found: cool_hotel.torganization
+[INFO][2016-02-27 11:07:33,710][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000037: Columns: [updatedatetime, id, address, name, seq, createdatetime, torganization_id, code, iconcls]
+[INFO][2016-02-27 11:07:33,710][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000108: Foreign keys: [fk_qqsb57hntt6y7rgxpyv193hro]
+[INFO][2016-02-27 11:07:33,710][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000126: Indexes: [fk_qqsb57hntt6y7rgxpyv193hro, primary]
+[INFO][2016-02-27 11:07:33,725][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000261: Table found: cool_hotel.torganization_tresource
+[INFO][2016-02-27 11:07:33,725][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000037: Columns: [tresource_id, torganization_id]
+[INFO][2016-02-27 11:07:33,725][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000108: Foreign keys: [fk_sumqrlo172d24o0h8rf1buqc6, fk_pn8e59lvj1b3tw6c5el9px7rw]
+[INFO][2016-02-27 11:07:33,725][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000126: Indexes: [fk_sumqrlo172d24o0h8rf1buqc6, fk_pn8e59lvj1b3tw6c5el9px7rw, primary]
+[INFO][2016-02-27 11:07:33,725][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000261: Table found: cool_hotel.tresource
+[INFO][2016-02-27 11:07:33,725][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000037: Columns: [updatedatetime, id, tresourcetype_id, description, name, target, seq, tresource_id, createdatetime, url, iconcls]
+[INFO][2016-02-27 11:07:33,725][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000108: Foreign keys: [fk_givl2cl1b219fbu0v8ydo72te, fk_hujigsbsqxao04bgjum7k23ig]
+[INFO][2016-02-27 11:07:33,725][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000126: Indexes: [fk_givl2cl1b219fbu0v8ydo72te, fk_hujigsbsqxao04bgjum7k23ig, primary]
+[INFO][2016-02-27 11:07:33,741][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000261: Table found: cool_hotel.tresourcetype
+[INFO][2016-02-27 11:07:33,741][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000037: Columns: [updatedatetime, id, description, name, createdatetime]
+[INFO][2016-02-27 11:07:33,741][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000108: Foreign keys: []
+[INFO][2016-02-27 11:07:33,741][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000126: Indexes: [primary]
+[INFO][2016-02-27 11:07:33,756][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000261: Table found: cool_hotel.trole
+[INFO][2016-02-27 11:07:33,756][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000037: Columns: [updatedatetime, id, description, name, seq, createdatetime, iconcls]
+[INFO][2016-02-27 11:07:33,756][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000108: Foreign keys: []
+[INFO][2016-02-27 11:07:33,756][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000126: Indexes: [primary]
+[INFO][2016-02-27 11:07:33,772][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000261: Table found: cool_hotel.trole_tresource
+[INFO][2016-02-27 11:07:33,772][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000037: Columns: [trole_id, tresource_id]
+[INFO][2016-02-27 11:07:33,772][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000108: Foreign keys: [fk_rnj9t5lx9ngqnioc3kw49uhm1, fk_1ill8lguabbf2apj4ve5960o6]
+[INFO][2016-02-27 11:07:33,772][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000126: Indexes: [primary, fk_rnj9t5lx9ngqnioc3kw49uhm1, fk_1ill8lguabbf2apj4ve5960o6]
+[INFO][2016-02-27 11:07:33,772][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000261: Table found: cool_hotel.troom
+[INFO][2016-02-27 11:07:33,772][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000037: Columns: [updatedatetime, id, roomproperty, roomcancancel, roomname, createdatetime, roomstatus, roomprice, photo, roomnum]
+[INFO][2016-02-27 11:07:33,772][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000108: Foreign keys: []
+[INFO][2016-02-27 11:07:33,772][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000126: Indexes: [primary]
+[INFO][2016-02-27 11:07:33,788][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000261: Table found: cool_hotel.tuser
+[INFO][2016-02-27 11:07:33,788][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000037: Columns: [updatedatetime, id, loginname, sex, pwd, name, age, createdatetime, photo]
+[INFO][2016-02-27 11:07:33,788][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000108: Foreign keys: []
+[INFO][2016-02-27 11:07:33,788][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000126: Indexes: [primary]
+[INFO][2016-02-27 11:07:33,819][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000261: Table found: cool_hotel.tuser_torganization
+[INFO][2016-02-27 11:07:33,819][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000037: Columns: [torganization_id, tuser_id]
+[INFO][2016-02-27 11:07:33,819][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000108: Foreign keys: [fk_p5n9t5ypeafn30gjit4s0c2e1, fk_gdqjklqr9ob6fa0cnoqkjc4ok]
+[INFO][2016-02-27 11:07:33,819][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000126: Indexes: [fk_p5n9t5ypeafn30gjit4s0c2e1, fk_gdqjklqr9ob6fa0cnoqkjc4ok, primary]
+[INFO][2016-02-27 11:07:33,819][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000261: Table found: cool_hotel.tuser_trole
+[INFO][2016-02-27 11:07:33,819][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000037: Columns: [trole_id, tuser_id]
+[INFO][2016-02-27 11:07:33,819][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000108: Foreign keys: [fk_2gb56nnc2hjnphnfuinf9mspt, fk_8g3waitd93emrkb1sb4ue682l]
+[INFO][2016-02-27 11:07:33,819][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000126: Indexes: [fk_2gb56nnc2hjnphnfuinf9mspt, fk_8g3waitd93emrkb1sb4ue682l, primary]
+[INFO][2016-02-27 11:07:33,819][org.hibernate.tool.hbm2ddl.SchemaUpdate]HHH000232: Schema update complete
+[INFO][2016-02-27 11:07:33,944][org.springframework.orm.hibernate4.HibernateTransactionManager]Using DataSource [{
+	CreateTime:"2016-02-27 11:07:32",
+	ActiveCount:0,
+	PoolingCount:1,
+	CreateCount:1,
+	DestroyCount:0,
+	CloseCount:2,
+	ConnectCount:2,
+	Connections:[
+		{ID:1571873348, ConnectTime:"2016-02-27 11:07:33", UseCount:2, LastActiveTime:"2016-02-27 11:07:33"}
+	]
+}] of Hibernate SessionFactory for HibernateTransactionManager
+[INFO][2016-02-27 11:07:34,131][nill.service.impl.UserServiceImpl] this is spring test will into the Spring
+[INFO][2016-02-27 11:07:34,412][org.springframework.test.context.transaction.TransactionalTestExecutionListener]Began transaction (1): transaction manager [org.springframework.orm.hibernate4.HibernateTransactionManager@47650a79]; rollback [true]
+[INFO][2016-02-27 11:07:34,569][org.springframework.test.context.transaction.TransactionalTestExecutionListener]Rolled back transaction after test execution for test context [TestContext@7587265a testClass = TestSpringHibernate, testInstance = nill.test.TestSpringHibernate@7be71afd, testMethod = test2@TestSpringHibernate, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@19d1798 testClass = TestSpringHibernate, locations = '{classpath:spring.xml, classpath:spring-hibernate.xml, classpath:spring-druid.xml}', classes = '{}', contextInitializerClasses = '[]', activeProfiles = '{}', contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]]
+[INFO][2016-02-27 11:07:34,584][org.springframework.context.support.GenericApplicationContext]Closing org.springframework.context.support.GenericApplicationContext@75d8ac9d: startup date [Sat Feb 27 11:07:31 CST 2016]; root of context hierarchy
+[INFO][2016-02-27 11:07:34,584][org.springframework.beans.factory.support.DefaultListableBeanFactory]Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@34de727a: defining beans [org.springframework.beans.factory.config.PropertyPlaceholderConfigurer#0,baseDaoImpl,baseServiceImpl,initServiceImpl,bookingServiceImpl,onlineServiceImpl,organizationServiceImpl,resourceServiceImpl,roleServiceImplmpl,roomServiceImpl,rresourcetypeServiceImpl,userServiceImpl,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.internalPersistenceAnnotationProcessor,dataSource,sessionFactory,transactionManager,transactionAdvice,org.springframework.aop.config.internalAutoProxyCreator,transactionPointcut,org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0,druid-stat-interceptor,druid-stat-pointcut,org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#1,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor]; root of factory hierarchy
+[INFO][2016-02-27 11:07:34,600][com.alibaba.druid.pool.DruidDataSource]{dataSource-1} closed
+[INFO][2016-02-27 11:17:43,340][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from class path resource [spring.xml]
+[INFO][2016-02-27 11:17:43,653][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from class path resource [spring-hibernate.xml]
+[INFO][2016-02-27 11:17:43,747][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from class path resource [spring-druid.xml]
+[INFO][2016-02-27 11:17:43,793][org.springframework.context.support.GenericApplicationContext]Refreshing org.springframework.context.support.GenericApplicationContext@17b90c55: startup date [Sat Feb 27 11:17:43 CST 2016]; root of context hierarchy
+[INFO][2016-02-27 11:17:43,996][org.springframework.beans.factory.config.PropertyPlaceholderConfigurer]Loading properties file from class path resource [config.properties]
+[INFO][2016-02-27 11:17:44,059][org.springframework.beans.factory.support.DefaultListableBeanFactory]Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@6a485d31: defining beans [org.springframework.beans.factory.config.PropertyPlaceholderConfigurer#0,baseDaoImpl,baseServiceImpl,initServiceImpl,bookingServiceImpl,onlineServiceImpl,organizationServiceImpl,resourceServiceImpl,roleServiceImplmpl,roomServiceImpl,rresourcetypeServiceImpl,userServiceImpl,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.internalPersistenceAnnotationProcessor,dataSource,sessionFactory,transactionManager,transactionAdvice,org.springframework.aop.config.internalAutoProxyCreator,transactionPointcut,org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0,druid-stat-interceptor,druid-stat-pointcut,org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#1,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor]; root of factory hierarchy
+[ERROR][2016-02-27 11:17:44,480][com.alibaba.druid.pool.DruidAbstractDataSource]maxIdle is deprecated
+[INFO][2016-02-27 11:17:44,591][com.alibaba.druid.pool.DruidDataSource]{dataSource-1} inited
+[INFO][2016-02-27 11:17:44,887][org.hibernate.annotations.common.Version]HCANN000001: Hibernate Commons Annotations {4.0.2.Final}
+[INFO][2016-02-27 11:17:44,887][org.hibernate.Version]HHH000412: Hibernate Core {4.2.7.SP1}
+[INFO][2016-02-27 11:17:44,887][org.hibernate.cfg.Environment]HHH000206: hibernate.properties not found
+[INFO][2016-02-27 11:17:44,887][org.hibernate.cfg.Environment]HHH000021: Bytecode provider name : javassist
+[INFO][2016-02-27 11:17:45,246][org.hibernate.dialect.Dialect]HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+[INFO][2016-02-27 11:17:45,449][org.hibernate.engine.transaction.internal.TransactionFactoryInitiator]HHH000399: Using default transaction strategy (direct JDBC transactions)
+[INFO][2016-02-27 11:17:45,449][org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory]HHH000397: Using ASTQueryTranslatorFactory
+[INFO][2016-02-27 11:17:45,761][org.hibernate.tool.hbm2ddl.SchemaUpdate]HHH000228: Running hbm2ddl schema update
+[INFO][2016-02-27 11:17:45,761][org.hibernate.tool.hbm2ddl.SchemaUpdate]HHH000102: Fetching database metadata
+[INFO][2016-02-27 11:17:45,761][org.hibernate.tool.hbm2ddl.SchemaUpdate]HHH000396: Updating schema
+[INFO][2016-02-27 11:17:45,792][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000261: Table found: cool_hotel.tbookinguser
+[INFO][2016-02-27 11:17:45,792][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000037: Columns: [indate, updatedatetime, id, roomcount, phone, email, name, createdatetime, outdate]
+[INFO][2016-02-27 11:17:45,792][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000108: Foreign keys: []
+[INFO][2016-02-27 11:17:45,792][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000126: Indexes: [primary]
+[INFO][2016-02-27 11:17:45,809][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000261: Table found: cool_hotel.tonline
+[INFO][2016-02-27 11:17:45,809][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000037: Columns: [id, loginname, createdatetime, type, ip]
+[INFO][2016-02-27 11:17:45,809][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000108: Foreign keys: []
+[INFO][2016-02-27 11:17:45,809][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000126: Indexes: [primary]
+[INFO][2016-02-27 11:17:45,824][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000261: Table found: cool_hotel.torganization
+[INFO][2016-02-27 11:17:45,824][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000037: Columns: [updatedatetime, id, address, name, seq, createdatetime, torganization_id, code, iconcls]
+[INFO][2016-02-27 11:17:45,824][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000108: Foreign keys: [fk_qqsb57hntt6y7rgxpyv193hro]
+[INFO][2016-02-27 11:17:45,824][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000126: Indexes: [fk_qqsb57hntt6y7rgxpyv193hro, primary]
+[INFO][2016-02-27 11:17:45,840][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000261: Table found: cool_hotel.torganization_tresource
+[INFO][2016-02-27 11:17:45,840][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000037: Columns: [tresource_id, torganization_id]
+[INFO][2016-02-27 11:17:45,840][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000108: Foreign keys: [fk_sumqrlo172d24o0h8rf1buqc6, fk_pn8e59lvj1b3tw6c5el9px7rw]
+[INFO][2016-02-27 11:17:45,840][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000126: Indexes: [fk_sumqrlo172d24o0h8rf1buqc6, fk_pn8e59lvj1b3tw6c5el9px7rw, primary]
+[INFO][2016-02-27 11:17:45,856][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000261: Table found: cool_hotel.tresource
+[INFO][2016-02-27 11:17:45,856][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000037: Columns: [updatedatetime, id, tresourcetype_id, description, name, target, seq, tresource_id, createdatetime, url, iconcls]
+[INFO][2016-02-27 11:17:45,856][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000108: Foreign keys: [fk_givl2cl1b219fbu0v8ydo72te, fk_hujigsbsqxao04bgjum7k23ig]
+[INFO][2016-02-27 11:17:45,856][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000126: Indexes: [fk_givl2cl1b219fbu0v8ydo72te, fk_hujigsbsqxao04bgjum7k23ig, primary]
+[INFO][2016-02-27 11:17:45,856][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000261: Table found: cool_hotel.tresourcetype
+[INFO][2016-02-27 11:17:45,871][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000037: Columns: [updatedatetime, id, description, name, createdatetime]
+[INFO][2016-02-27 11:17:45,871][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000108: Foreign keys: []
+[INFO][2016-02-27 11:17:45,871][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000126: Indexes: [primary]
+[INFO][2016-02-27 11:17:45,871][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000261: Table found: cool_hotel.trole
+[INFO][2016-02-27 11:17:45,871][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000037: Columns: [updatedatetime, id, description, name, seq, createdatetime, iconcls]
+[INFO][2016-02-27 11:17:45,871][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000108: Foreign keys: []
+[INFO][2016-02-27 11:17:45,871][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000126: Indexes: [primary]
+[INFO][2016-02-27 11:17:45,887][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000261: Table found: cool_hotel.trole_tresource
+[INFO][2016-02-27 11:17:45,887][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000037: Columns: [trole_id, tresource_id]
+[INFO][2016-02-27 11:17:45,887][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000108: Foreign keys: [fk_rnj9t5lx9ngqnioc3kw49uhm1, fk_1ill8lguabbf2apj4ve5960o6]
+[INFO][2016-02-27 11:17:45,887][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000126: Indexes: [primary, fk_rnj9t5lx9ngqnioc3kw49uhm1, fk_1ill8lguabbf2apj4ve5960o6]
+[INFO][2016-02-27 11:17:45,902][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000261: Table found: cool_hotel.troom
+[INFO][2016-02-27 11:17:45,902][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000037: Columns: [updatedatetime, id, roomproperty, roomcancancel, roomname, createdatetime, roomstatus, roomprice, photo, roomnum]
+[INFO][2016-02-27 11:17:45,902][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000108: Foreign keys: []
+[INFO][2016-02-27 11:17:45,902][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000126: Indexes: [primary]
+[INFO][2016-02-27 11:17:45,902][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000261: Table found: cool_hotel.tuser
+[INFO][2016-02-27 11:17:45,902][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000037: Columns: [updatedatetime, id, loginname, sex, pwd, name, age, createdatetime, photo]
+[INFO][2016-02-27 11:17:45,902][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000108: Foreign keys: []
+[INFO][2016-02-27 11:17:45,902][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000126: Indexes: [primary]
+[INFO][2016-02-27 11:17:45,934][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000261: Table found: cool_hotel.tuser_torganization
+[INFO][2016-02-27 11:17:45,934][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000037: Columns: [torganization_id, tuser_id]
+[INFO][2016-02-27 11:17:45,934][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000108: Foreign keys: [fk_p5n9t5ypeafn30gjit4s0c2e1, fk_gdqjklqr9ob6fa0cnoqkjc4ok]
+[INFO][2016-02-27 11:17:45,934][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000126: Indexes: [fk_p5n9t5ypeafn30gjit4s0c2e1, fk_gdqjklqr9ob6fa0cnoqkjc4ok, primary]
+[INFO][2016-02-27 11:17:45,934][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000261: Table found: cool_hotel.tuser_trole
+[INFO][2016-02-27 11:17:45,934][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000037: Columns: [trole_id, tuser_id]
+[INFO][2016-02-27 11:17:45,934][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000108: Foreign keys: [fk_2gb56nnc2hjnphnfuinf9mspt, fk_8g3waitd93emrkb1sb4ue682l]
+[INFO][2016-02-27 11:17:45,934][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000126: Indexes: [fk_2gb56nnc2hjnphnfuinf9mspt, fk_8g3waitd93emrkb1sb4ue682l, primary]
+[INFO][2016-02-27 11:17:45,949][org.hibernate.tool.hbm2ddl.SchemaUpdate]HHH000232: Schema update complete
+[INFO][2016-02-27 11:17:46,058][org.springframework.orm.hibernate4.HibernateTransactionManager]Using DataSource [{
+	CreateTime:"2016-02-27 11:17:44",
+	ActiveCount:0,
+	PoolingCount:1,
+	CreateCount:1,
+	DestroyCount:0,
+	CloseCount:2,
+	ConnectCount:2,
+	Connections:[
+		{ID:323487415, ConnectTime:"2016-02-27 11:17:45", UseCount:2, LastActiveTime:"2016-02-27 11:17:45"}
+	]
+}] of Hibernate SessionFactory for HibernateTransactionManager
+[INFO][2016-02-27 11:17:46,214][nill.service.impl.UserServiceImpl] this is spring test will into the Spring
+[INFO][2016-02-27 11:17:46,448][org.springframework.test.context.transaction.TransactionalTestExecutionListener]Began transaction (1): transaction manager [org.springframework.orm.hibernate4.HibernateTransactionManager@701070e9]; rollback [true]
+[INFO][2016-02-27 11:17:46,604][org.springframework.test.context.transaction.TransactionalTestExecutionListener]Rolled back transaction after test execution for test context [TestContext@7be71afd testClass = TestSpringHibernate, testInstance = nill.test.TestSpringHibernate@19d1798, testMethod = test2@TestSpringHibernate, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@7077fcfb testClass = TestSpringHibernate, locations = '{classpath:spring.xml, classpath:spring-hibernate.xml, classpath:spring-druid.xml}', classes = '{}', contextInitializerClasses = '[]', activeProfiles = '{}', contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]]
+[INFO][2016-02-27 11:17:46,604][org.springframework.context.support.GenericApplicationContext]Closing org.springframework.context.support.GenericApplicationContext@17b90c55: startup date [Sat Feb 27 11:17:43 CST 2016]; root of context hierarchy
+[INFO][2016-02-27 11:17:46,604][org.springframework.beans.factory.support.DefaultListableBeanFactory]Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@6a485d31: defining beans [org.springframework.beans.factory.config.PropertyPlaceholderConfigurer#0,baseDaoImpl,baseServiceImpl,initServiceImpl,bookingServiceImpl,onlineServiceImpl,organizationServiceImpl,resourceServiceImpl,roleServiceImplmpl,roomServiceImpl,rresourcetypeServiceImpl,userServiceImpl,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.internalPersistenceAnnotationProcessor,dataSource,sessionFactory,transactionManager,transactionAdvice,org.springframework.aop.config.internalAutoProxyCreator,transactionPointcut,org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0,druid-stat-interceptor,druid-stat-pointcut,org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#1,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor]; root of factory hierarchy
+[INFO][2016-02-27 11:17:46,620][com.alibaba.druid.pool.DruidDataSource]{dataSource-1} closed
+[INFO][2016-03-09 05:06:34,023][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from class path resource [spring.xml]
+[INFO][2016-03-09 05:06:34,240][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from class path resource [spring-hibernate.xml]
+[INFO][2016-03-09 05:06:34,300][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from class path resource [spring-druid.xml]
+[INFO][2016-03-09 05:06:34,323][org.springframework.context.support.GenericApplicationContext]Refreshing org.springframework.context.support.GenericApplicationContext@75d8ac9d: startup date [Wed Mar 09 05:06:34 CST 2016]; root of context hierarchy
+[INFO][2016-03-09 05:06:34,454][org.springframework.beans.factory.config.PropertyPlaceholderConfigurer]Loading properties file from class path resource [config.properties]
+[INFO][2016-03-09 05:06:34,484][org.springframework.beans.factory.support.DefaultListableBeanFactory]Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@465e1377: defining beans [org.springframework.beans.factory.config.PropertyPlaceholderConfigurer#0,baseDaoImpl,baseServiceImpl,initServiceImpl,bookingServiceImpl,onlineServiceImpl,organizationServiceImpl,resourceServiceImpl,roleServiceImplmpl,roomServiceImpl,rresourcetypeServiceImpl,userServiceImpl,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.internalPersistenceAnnotationProcessor,dataSource,sessionFactory,transactionManager,transactionAdvice,org.springframework.aop.config.internalAutoProxyCreator,transactionPointcut,org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0,druid-stat-interceptor,druid-stat-pointcut,org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#1,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor]; root of factory hierarchy
+[ERROR][2016-03-09 05:06:34,704][com.alibaba.druid.pool.DruidAbstractDataSource]maxIdle is deprecated
+[INFO][2016-03-09 05:06:34,786][com.alibaba.druid.pool.DruidDataSource]{dataSource-1} inited
+[INFO][2016-03-09 05:06:34,996][org.hibernate.annotations.common.Version]HCANN000001: Hibernate Commons Annotations {4.0.2.Final}
+[INFO][2016-03-09 05:06:35,001][org.hibernate.Version]HHH000412: Hibernate Core {4.2.7.SP1}
+[INFO][2016-03-09 05:06:35,002][org.hibernate.cfg.Environment]HHH000206: hibernate.properties not found
+[INFO][2016-03-09 05:06:35,003][org.hibernate.cfg.Environment]HHH000021: Bytecode provider name : javassist
+[INFO][2016-03-09 05:06:35,271][org.hibernate.dialect.Dialect]HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+[INFO][2016-03-09 05:06:35,414][org.hibernate.engine.transaction.internal.TransactionFactoryInitiator]HHH000399: Using default transaction strategy (direct JDBC transactions)
+[INFO][2016-03-09 05:06:35,418][org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory]HHH000397: Using ASTQueryTranslatorFactory
+[INFO][2016-03-09 05:06:35,633][org.hibernate.tool.hbm2ddl.SchemaUpdate]HHH000228: Running hbm2ddl schema update
+[INFO][2016-03-09 05:06:35,633][org.hibernate.tool.hbm2ddl.SchemaUpdate]HHH000102: Fetching database metadata
+[INFO][2016-03-09 05:06:35,636][org.hibernate.tool.hbm2ddl.SchemaUpdate]HHH000396: Updating schema
+[INFO][2016-03-09 05:06:35,657][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000261: Table found: cool_hotel.tbookinguser
+[INFO][2016-03-09 05:06:35,657][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000037: Columns: [indate, updatedatetime, id, roomcount, phone, email, name, createdatetime, outdate]
+[INFO][2016-03-09 05:06:35,658][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000108: Foreign keys: []
+[INFO][2016-03-09 05:06:35,658][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000126: Indexes: [primary]
+[INFO][2016-03-09 05:06:35,666][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000261: Table found: cool_hotel.tonline
+[INFO][2016-03-09 05:06:35,666][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000037: Columns: [id, loginname, createdatetime, type, ip]
+[INFO][2016-03-09 05:06:35,666][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000108: Foreign keys: []
+[INFO][2016-03-09 05:06:35,667][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000126: Indexes: [primary]
+[INFO][2016-03-09 05:06:35,675][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000261: Table found: cool_hotel.torganization
+[INFO][2016-03-09 05:06:35,676][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000037: Columns: [updatedatetime, id, address, name, seq, createdatetime, torganization_id, code, iconcls]
+[INFO][2016-03-09 05:06:35,676][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000108: Foreign keys: [fk_qqsb57hntt6y7rgxpyv193hro]
+[INFO][2016-03-09 05:06:35,676][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000126: Indexes: [fk_qqsb57hntt6y7rgxpyv193hro, primary]
+[INFO][2016-03-09 05:06:35,681][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000261: Table found: cool_hotel.torganization_tresource
+[INFO][2016-03-09 05:06:35,682][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000037: Columns: [tresource_id, torganization_id]
+[INFO][2016-03-09 05:06:35,682][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000108: Foreign keys: [fk_sumqrlo172d24o0h8rf1buqc6, fk_pn8e59lvj1b3tw6c5el9px7rw]
+[INFO][2016-03-09 05:06:35,682][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000126: Indexes: [fk_sumqrlo172d24o0h8rf1buqc6, fk_pn8e59lvj1b3tw6c5el9px7rw, primary]
+[INFO][2016-03-09 05:06:35,691][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000261: Table found: cool_hotel.tresource
+[INFO][2016-03-09 05:06:35,691][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000037: Columns: [updatedatetime, id, tresourcetype_id, description, name, target, seq, tresource_id, createdatetime, url, iconcls]
+[INFO][2016-03-09 05:06:35,692][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000108: Foreign keys: [fk_givl2cl1b219fbu0v8ydo72te, fk_hujigsbsqxao04bgjum7k23ig]
+[INFO][2016-03-09 05:06:35,692][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000126: Indexes: [fk_givl2cl1b219fbu0v8ydo72te, fk_hujigsbsqxao04bgjum7k23ig, primary]
+[INFO][2016-03-09 05:06:35,698][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000261: Table found: cool_hotel.tresourcetype
+[INFO][2016-03-09 05:06:35,698][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000037: Columns: [updatedatetime, id, description, name, createdatetime]
+[INFO][2016-03-09 05:06:35,698][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000108: Foreign keys: []
+[INFO][2016-03-09 05:06:35,699][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000126: Indexes: [primary]
+[INFO][2016-03-09 05:06:35,706][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000261: Table found: cool_hotel.trole
+[INFO][2016-03-09 05:06:35,706][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000037: Columns: [updatedatetime, id, description, name, seq, createdatetime, iconcls]
+[INFO][2016-03-09 05:06:35,706][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000108: Foreign keys: []
+[INFO][2016-03-09 05:06:35,707][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000126: Indexes: [primary]
+[INFO][2016-03-09 05:06:35,712][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000261: Table found: cool_hotel.trole_tresource
+[INFO][2016-03-09 05:06:35,713][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000037: Columns: [trole_id, tresource_id]
+[INFO][2016-03-09 05:06:35,713][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000108: Foreign keys: [fk_rnj9t5lx9ngqnioc3kw49uhm1, fk_1ill8lguabbf2apj4ve5960o6]
+[INFO][2016-03-09 05:06:35,713][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000126: Indexes: [primary, fk_rnj9t5lx9ngqnioc3kw49uhm1, fk_1ill8lguabbf2apj4ve5960o6]
+[INFO][2016-03-09 05:06:35,721][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000261: Table found: cool_hotel.troom
+[INFO][2016-03-09 05:06:35,721][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000037: Columns: [updatedatetime, id, roomproperty, roomcancancel, roomname, createdatetime, roomstatus, roomprice, photo, roomnum]
+[INFO][2016-03-09 05:06:35,721][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000108: Foreign keys: []
+[INFO][2016-03-09 05:06:35,721][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000126: Indexes: [primary]
+[INFO][2016-03-09 05:06:35,728][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000261: Table found: cool_hotel.tuser
+[INFO][2016-03-09 05:06:35,728][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000037: Columns: [updatedatetime, id, loginname, sex, pwd, name, age, createdatetime, photo]
+[INFO][2016-03-09 05:06:35,729][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000108: Foreign keys: []
+[INFO][2016-03-09 05:06:35,729][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000126: Indexes: [primary]
+[INFO][2016-03-09 05:06:35,737][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000261: Table found: cool_hotel.tuser_torganization
+[INFO][2016-03-09 05:06:35,737][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000037: Columns: [torganization_id, tuser_id]
+[INFO][2016-03-09 05:06:35,737][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000108: Foreign keys: [fk_p5n9t5ypeafn30gjit4s0c2e1, fk_gdqjklqr9ob6fa0cnoqkjc4ok]
+[INFO][2016-03-09 05:06:35,737][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000126: Indexes: [fk_p5n9t5ypeafn30gjit4s0c2e1, fk_gdqjklqr9ob6fa0cnoqkjc4ok, primary]
+[INFO][2016-03-09 05:06:35,744][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000261: Table found: cool_hotel.tuser_trole
+[INFO][2016-03-09 05:06:35,744][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000037: Columns: [trole_id, tuser_id]
+[INFO][2016-03-09 05:06:35,744][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000108: Foreign keys: [fk_2gb56nnc2hjnphnfuinf9mspt, fk_8g3waitd93emrkb1sb4ue682l]
+[INFO][2016-03-09 05:06:35,744][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000126: Indexes: [fk_2gb56nnc2hjnphnfuinf9mspt, fk_8g3waitd93emrkb1sb4ue682l, primary]
+[INFO][2016-03-09 05:06:35,749][org.hibernate.tool.hbm2ddl.SchemaUpdate]HHH000232: Schema update complete
+[INFO][2016-03-09 05:06:35,815][org.springframework.orm.hibernate4.HibernateTransactionManager]Using DataSource [{
+	CreateTime:"2016-03-09 05:06:34",
+	ActiveCount:0,
+	PoolingCount:1,
+	CreateCount:1,
+	DestroyCount:0,
+	CloseCount:2,
+	ConnectCount:2,
+	Connections:[
+		{ID:768010433, ConnectTime:"2016-03-09 05:06:35", UseCount:2, LastActiveTime:"2016-03-09 05:06:35"}
+	]
+}] of Hibernate SessionFactory for HibernateTransactionManager
+[INFO][2016-03-09 05:06:35,922][nill.service.impl.UserServiceImpl] this is spring test will into the Spring
+[INFO][2016-03-09 05:06:36,080][org.springframework.test.context.transaction.TransactionalTestExecutionListener]Began transaction (1): transaction manager [org.springframework.orm.hibernate4.HibernateTransactionManager@43fb81ce]; rollback [true]
+[INFO][2016-03-09 05:06:36,190][org.springframework.test.context.transaction.TransactionalTestExecutionListener]Rolled back transaction after test execution for test context [TestContext@29b1b28c testClass = TestSpringHibernate, testInstance = nill.test.TestSpringHibernate@51411ab6, testMethod = test2@TestSpringHibernate, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@940cc67 testClass = TestSpringHibernate, locations = '{classpath:spring.xml, classpath:spring-hibernate.xml, classpath:spring-druid.xml}', classes = '{}', contextInitializerClasses = '[]', activeProfiles = '{}', contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]]
+[INFO][2016-03-09 05:06:36,195][org.springframework.context.support.GenericApplicationContext]Closing org.springframework.context.support.GenericApplicationContext@75d8ac9d: startup date [Wed Mar 09 05:06:34 CST 2016]; root of context hierarchy
+[INFO][2016-03-09 05:06:36,195][org.springframework.beans.factory.support.DefaultListableBeanFactory]Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@465e1377: defining beans [org.springframework.beans.factory.config.PropertyPlaceholderConfigurer#0,baseDaoImpl,baseServiceImpl,initServiceImpl,bookingServiceImpl,onlineServiceImpl,organizationServiceImpl,resourceServiceImpl,roleServiceImplmpl,roomServiceImpl,rresourcetypeServiceImpl,userServiceImpl,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.internalPersistenceAnnotationProcessor,dataSource,sessionFactory,transactionManager,transactionAdvice,org.springframework.aop.config.internalAutoProxyCreator,transactionPointcut,org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0,druid-stat-interceptor,druid-stat-pointcut,org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#1,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor]; root of factory hierarchy
+[INFO][2016-03-09 05:06:36,202][com.alibaba.druid.pool.DruidDataSource]{dataSource-1} closed
+[INFO][2016-03-09 10:50:52,737][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from class path resource [spring.xml]
+[INFO][2016-03-09 10:50:52,925][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from class path resource [spring-hibernate.xml]
+[INFO][2016-03-09 10:50:52,987][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from class path resource [spring-druid.xml]
+[INFO][2016-03-09 10:50:53,003][org.springframework.context.support.GenericApplicationContext]Refreshing org.springframework.context.support.GenericApplicationContext@642cb3dc: startup date [Wed Mar 09 10:50:53 CST 2016]; root of context hierarchy
+[INFO][2016-03-09 10:50:53,143][org.springframework.beans.factory.config.PropertyPlaceholderConfigurer]Loading properties file from class path resource [config.properties]
+[INFO][2016-03-09 10:50:53,174][org.springframework.beans.factory.support.DefaultListableBeanFactory]Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@4a500db8: defining beans [org.springframework.beans.factory.config.PropertyPlaceholderConfigurer#0,baseDaoImpl,baseServiceImpl,initServiceImpl,bookingServiceImpl,onlineServiceImpl,organizationServiceImpl,resourceServiceImpl,roleServiceImplmpl,roomServiceImpl,rresourcetypeServiceImpl,userServiceImpl,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.internalPersistenceAnnotationProcessor,dataSource,sessionFactory,transactionManager,transactionAdvice,org.springframework.aop.config.internalAutoProxyCreator,transactionPointcut,org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0,druid-stat-interceptor,druid-stat-pointcut,org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#1,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor]; root of factory hierarchy
+[ERROR][2016-03-09 10:50:53,580][com.alibaba.druid.pool.DruidAbstractDataSource]maxIdle is deprecated
+[INFO][2016-03-09 10:50:53,674][com.alibaba.druid.pool.DruidDataSource]{dataSource-1} inited
+[INFO][2016-03-09 10:50:53,862][org.hibernate.annotations.common.Version]HCANN000001: Hibernate Commons Annotations {4.0.2.Final}
+[INFO][2016-03-09 10:50:53,877][org.hibernate.Version]HHH000412: Hibernate Core {4.2.7.SP1}
+[INFO][2016-03-09 10:50:53,877][org.hibernate.cfg.Environment]HHH000206: hibernate.properties not found
+[INFO][2016-03-09 10:50:53,877][org.hibernate.cfg.Environment]HHH000021: Bytecode provider name : javassist
+[INFO][2016-03-09 10:50:54,142][org.hibernate.dialect.Dialect]HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+[INFO][2016-03-09 10:50:54,314][org.hibernate.engine.transaction.internal.TransactionFactoryInitiator]HHH000399: Using default transaction strategy (direct JDBC transactions)
+[INFO][2016-03-09 10:50:54,330][org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory]HHH000397: Using ASTQueryTranslatorFactory
+[INFO][2016-03-09 10:50:54,579][org.hibernate.tool.hbm2ddl.SchemaUpdate]HHH000228: Running hbm2ddl schema update
+[INFO][2016-03-09 10:50:54,579][org.hibernate.tool.hbm2ddl.SchemaUpdate]HHH000102: Fetching database metadata
+[INFO][2016-03-09 10:50:54,579][org.hibernate.tool.hbm2ddl.SchemaUpdate]HHH000396: Updating schema
+[INFO][2016-03-09 10:50:54,673][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000261: Table found: cool_hotel.tbookinguser
+[INFO][2016-03-09 10:50:54,673][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000037: Columns: [indate, updatedatetime, id, roomcount, phone, email, name, createdatetime, outdate]
+[INFO][2016-03-09 10:50:54,673][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000108: Foreign keys: []
+[INFO][2016-03-09 10:50:54,673][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000126: Indexes: [primary]
+[INFO][2016-03-09 10:50:54,721][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000261: Table found: cool_hotel.tonline
+[INFO][2016-03-09 10:50:54,721][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000037: Columns: [id, loginname, createdatetime, type, ip]
+[INFO][2016-03-09 10:50:54,721][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000108: Foreign keys: []
+[INFO][2016-03-09 10:50:54,721][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000126: Indexes: [primary]
+[INFO][2016-03-09 10:50:54,814][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000261: Table found: cool_hotel.torganization
+[INFO][2016-03-09 10:50:54,830][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000037: Columns: [updatedatetime, id, address, name, seq, createdatetime, torganization_id, code, iconcls]
+[INFO][2016-03-09 10:50:54,830][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000108: Foreign keys: [fk_qqsb57hntt6y7rgxpyv193hro]
+[INFO][2016-03-09 10:50:54,830][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000126: Indexes: [fk_qqsb57hntt6y7rgxpyv193hro, primary]
+[INFO][2016-03-09 10:50:54,861][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000261: Table found: cool_hotel.torganization_tresource
+[INFO][2016-03-09 10:50:54,861][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000037: Columns: [tresource_id, torganization_id]
+[INFO][2016-03-09 10:50:54,861][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000108: Foreign keys: [fk_sumqrlo172d24o0h8rf1buqc6, fk_pn8e59lvj1b3tw6c5el9px7rw]
+[INFO][2016-03-09 10:50:54,861][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000126: Indexes: [fk_sumqrlo172d24o0h8rf1buqc6, fk_pn8e59lvj1b3tw6c5el9px7rw, primary]
+[INFO][2016-03-09 10:50:54,955][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000261: Table found: cool_hotel.tresource
+[INFO][2016-03-09 10:50:54,955][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000037: Columns: [updatedatetime, id, tresourcetype_id, description, name, target, seq, tresource_id, createdatetime, url, iconcls]
+[INFO][2016-03-09 10:50:54,955][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000108: Foreign keys: [fk_givl2cl1b219fbu0v8ydo72te, fk_hujigsbsqxao04bgjum7k23ig]
+[INFO][2016-03-09 10:50:54,955][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000126: Indexes: [fk_givl2cl1b219fbu0v8ydo72te, fk_hujigsbsqxao04bgjum7k23ig, primary]
+[INFO][2016-03-09 10:50:55,001][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000261: Table found: cool_hotel.tresourcetype
+[INFO][2016-03-09 10:50:55,001][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000037: Columns: [updatedatetime, id, description, name, createdatetime]
+[INFO][2016-03-09 10:50:55,001][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000108: Foreign keys: []
+[INFO][2016-03-09 10:50:55,001][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000126: Indexes: [primary]
+[INFO][2016-03-09 10:50:55,064][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000261: Table found: cool_hotel.trole
+[INFO][2016-03-09 10:50:55,064][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000037: Columns: [updatedatetime, id, description, name, seq, createdatetime, iconcls]
+[INFO][2016-03-09 10:50:55,064][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000108: Foreign keys: []
+[INFO][2016-03-09 10:50:55,064][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000126: Indexes: [primary]
+[INFO][2016-03-09 10:50:55,126][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000261: Table found: cool_hotel.trole_tresource
+[INFO][2016-03-09 10:50:55,126][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000037: Columns: [trole_id, tresource_id]
+[INFO][2016-03-09 10:50:55,126][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000108: Foreign keys: [fk_rnj9t5lx9ngqnioc3kw49uhm1, fk_1ill8lguabbf2apj4ve5960o6]
+[INFO][2016-03-09 10:50:55,126][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000126: Indexes: [primary, fk_rnj9t5lx9ngqnioc3kw49uhm1, fk_1ill8lguabbf2apj4ve5960o6]
+[INFO][2016-03-09 10:50:55,204][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000261: Table found: cool_hotel.troom
+[INFO][2016-03-09 10:50:55,204][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000037: Columns: [updatedatetime, id, roomproperty, roomcancancel, roomname, createdatetime, roomstatus, roomprice, photo, roomnum]
+[INFO][2016-03-09 10:50:55,204][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000108: Foreign keys: []
+[INFO][2016-03-09 10:50:55,204][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000126: Indexes: [primary]
+[INFO][2016-03-09 10:50:55,282][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000261: Table found: cool_hotel.tuser
+[INFO][2016-03-09 10:50:55,282][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000037: Columns: [updatedatetime, id, loginname, sex, pwd, name, age, createdatetime, photo]
+[INFO][2016-03-09 10:50:55,282][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000108: Foreign keys: []
+[INFO][2016-03-09 10:50:55,282][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000126: Indexes: [primary]
+[INFO][2016-03-09 10:50:55,360][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000261: Table found: cool_hotel.tuser_torganization
+[INFO][2016-03-09 10:50:55,360][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000037: Columns: [torganization_id, tuser_id]
+[INFO][2016-03-09 10:50:55,360][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000108: Foreign keys: [fk_p5n9t5ypeafn30gjit4s0c2e1, fk_gdqjklqr9ob6fa0cnoqkjc4ok]
+[INFO][2016-03-09 10:50:55,360][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000126: Indexes: [fk_p5n9t5ypeafn30gjit4s0c2e1, fk_gdqjklqr9ob6fa0cnoqkjc4ok, primary]
+[INFO][2016-03-09 10:50:55,376][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000261: Table found: cool_hotel.tuser_trole
+[INFO][2016-03-09 10:50:55,376][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000037: Columns: [trole_id, tuser_id]
+[INFO][2016-03-09 10:50:55,376][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000108: Foreign keys: [fk_2gb56nnc2hjnphnfuinf9mspt, fk_8g3waitd93emrkb1sb4ue682l]
+[INFO][2016-03-09 10:50:55,376][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000126: Indexes: [fk_2gb56nnc2hjnphnfuinf9mspt, fk_8g3waitd93emrkb1sb4ue682l, primary]
+[INFO][2016-03-09 10:50:55,391][org.hibernate.tool.hbm2ddl.SchemaUpdate]HHH000232: Schema update complete
+[INFO][2016-03-09 10:50:55,438][org.springframework.orm.hibernate4.HibernateTransactionManager]Using DataSource [{
+	CreateTime:"2016-03-09 10:50:53",
+	ActiveCount:0,
+	PoolingCount:1,
+	CreateCount:1,
+	DestroyCount:0,
+	CloseCount:2,
+	ConnectCount:2,
+	Connections:[
+		{ID:1092942102, ConnectTime:"2016-03-09 10:50:54", UseCount:2, LastActiveTime:"2016-03-09 10:50:55"}
+	]
+}] of Hibernate SessionFactory for HibernateTransactionManager
+[INFO][2016-03-09 10:50:55,547][nill.service.impl.UserServiceImpl] this is spring test will into the Spring
+[INFO][2016-03-09 10:50:55,703][org.springframework.test.context.transaction.TransactionalTestExecutionListener]Began transaction (1): transaction manager [org.springframework.orm.hibernate4.HibernateTransactionManager@44cd75fd]; rollback [true]
+[INFO][2016-03-09 10:50:55,845][org.springframework.test.context.transaction.TransactionalTestExecutionListener]Rolled back transaction after test execution for test context [TestContext@38e31d90 testClass = TestSpringHibernate, testInstance = nill.test.TestSpringHibernate@46a9f61d, testMethod = test2@TestSpringHibernate, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@405d0e29 testClass = TestSpringHibernate, locations = '{classpath:spring.xml, classpath:spring-hibernate.xml, classpath:spring-druid.xml}', classes = '{}', contextInitializerClasses = '[]', activeProfiles = '{}', contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]]
+[INFO][2016-03-09 10:50:55,845][org.springframework.context.support.GenericApplicationContext]Closing org.springframework.context.support.GenericApplicationContext@642cb3dc: startup date [Wed Mar 09 10:50:53 CST 2016]; root of context hierarchy
+[INFO][2016-03-09 10:50:55,845][org.springframework.beans.factory.support.DefaultListableBeanFactory]Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@4a500db8: defining beans [org.springframework.beans.factory.config.PropertyPlaceholderConfigurer#0,baseDaoImpl,baseServiceImpl,initServiceImpl,bookingServiceImpl,onlineServiceImpl,organizationServiceImpl,resourceServiceImpl,roleServiceImplmpl,roomServiceImpl,rresourcetypeServiceImpl,userServiceImpl,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.internalPersistenceAnnotationProcessor,dataSource,sessionFactory,transactionManager,transactionAdvice,org.springframework.aop.config.internalAutoProxyCreator,transactionPointcut,org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0,druid-stat-interceptor,druid-stat-pointcut,org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#1,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor]; root of factory hierarchy
+[INFO][2016-03-09 10:50:55,860][com.alibaba.druid.pool.DruidDataSource]{dataSource-1} closed
+[INFO][2016-03-10 07:24:26,969][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from class path resource [spring.xml]
+[INFO][2016-03-10 07:24:27,140][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from class path resource [spring-hibernate.xml]
+[INFO][2016-03-10 07:24:27,187][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from class path resource [spring-druid.xml]
+[INFO][2016-03-10 07:24:27,203][org.springframework.context.support.GenericApplicationContext]Refreshing org.springframework.context.support.GenericApplicationContext@642cb3dc: startup date [Thu Mar 10 07:24:27 CST 2016]; root of context hierarchy
+[INFO][2016-03-10 07:24:27,328][org.springframework.beans.factory.config.PropertyPlaceholderConfigurer]Loading properties file from class path resource [config.properties]
+[INFO][2016-03-10 07:24:27,359][org.springframework.beans.factory.support.DefaultListableBeanFactory]Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@2a1b4b2: defining beans [org.springframework.beans.factory.config.PropertyPlaceholderConfigurer#0,baseDaoImpl,baseServiceImpl,initServiceImpl,bookingServiceImpl,onlineServiceImpl,organizationServiceImpl,resourceServiceImpl,roleServiceImplmpl,roomServiceImpl,rresourcetypeServiceImpl,userServiceImpl,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.internalPersistenceAnnotationProcessor,dataSource,sessionFactory,transactionManager,transactionAdvice,org.springframework.aop.config.internalAutoProxyCreator,transactionPointcut,org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0,druid-stat-interceptor,druid-stat-pointcut,org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#1,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor]; root of factory hierarchy
+[ERROR][2016-03-10 07:24:27,546][com.alibaba.druid.pool.DruidAbstractDataSource]maxIdle is deprecated
+[INFO][2016-03-10 07:24:27,624][com.alibaba.druid.pool.DruidDataSource]{dataSource-1} inited
+[INFO][2016-03-10 07:24:27,842][org.hibernate.annotations.common.Version]HCANN000001: Hibernate Commons Annotations {4.0.2.Final}
+[INFO][2016-03-10 07:24:27,858][org.hibernate.Version]HHH000412: Hibernate Core {4.2.7.SP1}
+[INFO][2016-03-10 07:24:27,858][org.hibernate.cfg.Environment]HHH000206: hibernate.properties not found
+[INFO][2016-03-10 07:24:27,858][org.hibernate.cfg.Environment]HHH000021: Bytecode provider name : javassist
+[INFO][2016-03-10 07:24:28,124][org.hibernate.dialect.Dialect]HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+[INFO][2016-03-10 07:24:28,280][org.hibernate.engine.transaction.internal.TransactionFactoryInitiator]HHH000399: Using default transaction strategy (direct JDBC transactions)
+[INFO][2016-03-10 07:24:28,280][org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory]HHH000397: Using ASTQueryTranslatorFactory
+[INFO][2016-03-10 07:24:28,483][org.hibernate.tool.hbm2ddl.SchemaUpdate]HHH000228: Running hbm2ddl schema update
+[INFO][2016-03-10 07:24:28,483][org.hibernate.tool.hbm2ddl.SchemaUpdate]HHH000102: Fetching database metadata
+[INFO][2016-03-10 07:24:28,483][org.hibernate.tool.hbm2ddl.SchemaUpdate]HHH000396: Updating schema
+[INFO][2016-03-10 07:24:28,499][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000261: Table found: cool_hotel.tbookinguser
+[INFO][2016-03-10 07:24:28,499][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000037: Columns: [indate, updatedatetime, id, roomcount, phone, email, name, createdatetime, outdate]
+[INFO][2016-03-10 07:24:28,499][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000108: Foreign keys: []
+[INFO][2016-03-10 07:24:28,499][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000126: Indexes: [primary]
+[INFO][2016-03-10 07:24:28,514][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000261: Table found: cool_hotel.tonline
+[INFO][2016-03-10 07:24:28,514][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000037: Columns: [id, loginname, createdatetime, type, ip]
+[INFO][2016-03-10 07:24:28,514][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000108: Foreign keys: []
+[INFO][2016-03-10 07:24:28,514][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000126: Indexes: [primary]
+[INFO][2016-03-10 07:24:28,514][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000261: Table found: cool_hotel.torganization
+[INFO][2016-03-10 07:24:28,514][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000037: Columns: [updatedatetime, id, address, name, seq, createdatetime, torganization_id, code, iconcls]
+[INFO][2016-03-10 07:24:28,514][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000108: Foreign keys: [fk_qqsb57hntt6y7rgxpyv193hro]
+[INFO][2016-03-10 07:24:28,514][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000126: Indexes: [fk_qqsb57hntt6y7rgxpyv193hro, primary]
+[INFO][2016-03-10 07:24:28,530][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000261: Table found: cool_hotel.torganization_tresource
+[INFO][2016-03-10 07:24:28,530][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000037: Columns: [tresource_id, torganization_id]
+[INFO][2016-03-10 07:24:28,530][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000108: Foreign keys: [fk_sumqrlo172d24o0h8rf1buqc6, fk_pn8e59lvj1b3tw6c5el9px7rw]
+[INFO][2016-03-10 07:24:28,530][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000126: Indexes: [fk_sumqrlo172d24o0h8rf1buqc6, fk_pn8e59lvj1b3tw6c5el9px7rw, primary]
+[INFO][2016-03-10 07:24:28,530][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000261: Table found: cool_hotel.tresource
+[INFO][2016-03-10 07:24:28,530][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000037: Columns: [updatedatetime, id, tresourcetype_id, description, name, target, seq, tresource_id, createdatetime, url, iconcls]
+[INFO][2016-03-10 07:24:28,530][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000108: Foreign keys: [fk_givl2cl1b219fbu0v8ydo72te, fk_hujigsbsqxao04bgjum7k23ig]
+[INFO][2016-03-10 07:24:28,530][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000126: Indexes: [fk_givl2cl1b219fbu0v8ydo72te, fk_hujigsbsqxao04bgjum7k23ig, primary]
+[INFO][2016-03-10 07:24:28,545][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000261: Table found: cool_hotel.tresourcetype
+[INFO][2016-03-10 07:24:28,545][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000037: Columns: [updatedatetime, id, description, name, createdatetime]
+[INFO][2016-03-10 07:24:28,545][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000108: Foreign keys: []
+[INFO][2016-03-10 07:24:28,545][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000126: Indexes: [primary]
+[INFO][2016-03-10 07:24:28,545][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000261: Table found: cool_hotel.trole
+[INFO][2016-03-10 07:24:28,545][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000037: Columns: [updatedatetime, id, description, name, seq, createdatetime, iconcls]
+[INFO][2016-03-10 07:24:28,545][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000108: Foreign keys: []
+[INFO][2016-03-10 07:24:28,545][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000126: Indexes: [primary]
+[INFO][2016-03-10 07:24:28,545][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000261: Table found: cool_hotel.trole_tresource
+[INFO][2016-03-10 07:24:28,545][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000037: Columns: [trole_id, tresource_id]
+[INFO][2016-03-10 07:24:28,545][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000108: Foreign keys: [fk_rnj9t5lx9ngqnioc3kw49uhm1, fk_1ill8lguabbf2apj4ve5960o6]
+[INFO][2016-03-10 07:24:28,545][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000126: Indexes: [primary, fk_rnj9t5lx9ngqnioc3kw49uhm1, fk_1ill8lguabbf2apj4ve5960o6]
+[INFO][2016-03-10 07:24:28,561][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000261: Table found: cool_hotel.troom
+[INFO][2016-03-10 07:24:28,561][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000037: Columns: [updatedatetime, id, roomproperty, roomcancancel, roomname, createdatetime, roomstatus, roomprice, photo, roomnum]
+[INFO][2016-03-10 07:24:28,561][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000108: Foreign keys: []
+[INFO][2016-03-10 07:24:28,561][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000126: Indexes: [primary]
+[INFO][2016-03-10 07:24:28,561][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000261: Table found: cool_hotel.tuser
+[INFO][2016-03-10 07:24:28,561][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000037: Columns: [updatedatetime, id, loginname, sex, pwd, name, age, createdatetime, photo]
+[INFO][2016-03-10 07:24:28,561][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000108: Foreign keys: []
+[INFO][2016-03-10 07:24:28,561][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000126: Indexes: [primary]
+[INFO][2016-03-10 07:24:28,561][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000261: Table found: cool_hotel.tuser_torganization
+[INFO][2016-03-10 07:24:28,561][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000037: Columns: [torganization_id, tuser_id]
+[INFO][2016-03-10 07:24:28,561][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000108: Foreign keys: [fk_p5n9t5ypeafn30gjit4s0c2e1, fk_gdqjklqr9ob6fa0cnoqkjc4ok]
+[INFO][2016-03-10 07:24:28,561][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000126: Indexes: [fk_p5n9t5ypeafn30gjit4s0c2e1, fk_gdqjklqr9ob6fa0cnoqkjc4ok, primary]
+[INFO][2016-03-10 07:24:28,577][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000261: Table found: cool_hotel.tuser_trole
+[INFO][2016-03-10 07:24:28,577][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000037: Columns: [trole_id, tuser_id]
+[INFO][2016-03-10 07:24:28,577][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000108: Foreign keys: [fk_2gb56nnc2hjnphnfuinf9mspt, fk_8g3waitd93emrkb1sb4ue682l]
+[INFO][2016-03-10 07:24:28,577][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000126: Indexes: [fk_2gb56nnc2hjnphnfuinf9mspt, fk_8g3waitd93emrkb1sb4ue682l, primary]
+[INFO][2016-03-10 07:24:28,577][org.hibernate.tool.hbm2ddl.SchemaUpdate]HHH000232: Schema update complete
+[INFO][2016-03-10 07:24:28,639][org.springframework.orm.hibernate4.HibernateTransactionManager]Using DataSource [{
+	CreateTime:"2016-03-10 07:24:27",
+	ActiveCount:0,
+	PoolingCount:1,
+	CreateCount:1,
+	DestroyCount:0,
+	CloseCount:2,
+	ConnectCount:2,
+	Connections:[
+		{ID:1092942102, ConnectTime:"2016-03-10 07:24:28", UseCount:2, LastActiveTime:"2016-03-10 07:24:28"}
+	]
+}] of Hibernate SessionFactory for HibernateTransactionManager
+[INFO][2016-03-10 07:24:28,717][nill.service.impl.UserServiceImpl] this is spring test will into the Spring
+[INFO][2016-03-10 07:24:28,935][org.springframework.test.context.transaction.TransactionalTestExecutionListener]Began transaction (1): transaction manager [org.springframework.orm.hibernate4.HibernateTransactionManager@44cd75fd]; rollback [true]
+[INFO][2016-03-10 07:24:29,061][org.springframework.test.context.transaction.TransactionalTestExecutionListener]Rolled back transaction after test execution for test context [TestContext@4455b354 testClass = TestSpringHibernate, testInstance = nill.test.TestSpringHibernate@567072d8, testMethod = test2@TestSpringHibernate, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@7083ef3d testClass = TestSpringHibernate, locations = '{classpath:spring.xml, classpath:spring-hibernate.xml, classpath:spring-druid.xml}', classes = '{}', contextInitializerClasses = '[]', activeProfiles = '{}', contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]]
+[INFO][2016-03-10 07:24:29,061][org.springframework.context.support.GenericApplicationContext]Closing org.springframework.context.support.GenericApplicationContext@642cb3dc: startup date [Thu Mar 10 07:24:27 CST 2016]; root of context hierarchy
+[INFO][2016-03-10 07:24:29,061][org.springframework.beans.factory.support.DefaultListableBeanFactory]Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@2a1b4b2: defining beans [org.springframework.beans.factory.config.PropertyPlaceholderConfigurer#0,baseDaoImpl,baseServiceImpl,initServiceImpl,bookingServiceImpl,onlineServiceImpl,organizationServiceImpl,resourceServiceImpl,roleServiceImplmpl,roomServiceImpl,rresourcetypeServiceImpl,userServiceImpl,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.internalPersistenceAnnotationProcessor,dataSource,sessionFactory,transactionManager,transactionAdvice,org.springframework.aop.config.internalAutoProxyCreator,transactionPointcut,org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0,druid-stat-interceptor,druid-stat-pointcut,org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#1,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor]; root of factory hierarchy
+[INFO][2016-03-10 07:24:29,077][com.alibaba.druid.pool.DruidDataSource]{dataSource-1} closed

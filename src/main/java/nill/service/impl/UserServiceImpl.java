@@ -34,7 +34,7 @@ public class UserServiceImpl extends BaseServiceImpl<Tuser> implements UserServi
 	@Override
 	public void test() {
 		// TODO Auto-generated method stub
-		logger.info(" this is spring test while into the Spring");
+		logger.info(" this is spring test will into the Spring");
 	}
 
 	@Override

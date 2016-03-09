@@ -23,9 +23,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   </head>
   
   <body>
-    This is my JSP page. <br>
-    indexindexindexindexindexindexindex
-    indexindexindex
-    index
+  <div class="easyui-layout">
+    <img alt="" src="Image/bz.jpg" style="width:300px;height:200px;">
+  </div>
   </body>
 </html>

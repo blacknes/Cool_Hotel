@@ -25,6 +25,22 @@
 		<resource id="jdyd" name="酒店预订" url="/admin/base/Nillbookroom.jsp" description="Apache CXF DEMO" seq="0" iconCls="ext-icon-world" pid="jddf">
 			<resourcetype id="0" name="菜单" />
 		</resource>
+		<resource id="ydlb" name="预订列表" url="/base/booking!grid" description="查询用户列表" seq="0" iconCls="ext-icon-bullet_wrench" pid="jdyd">
+			<resourcetype id="1" name="功能" />
+		</resource>
+		<resource id="ydtj" name="添加预订" url="/base/booking!save" description="添加房间" seq="1" iconCls="ext-icon-bullet_wrench" pid="jdyd">
+			<resourcetype id="1" name="功能" />
+		</resource>
+		<resource id="ydbj" name="编辑预订" url="/base/booking!update" description="编辑房间" seq="2" iconCls="ext-icon-bullet_wrench" pid="jdyd">
+			<resourcetype id="1" name="功能" />
+		</resource>
+		<resource id="ydsc" name="删除预订" url="/base/booking!delete" description="删除房间" seq="3" iconCls="ext-icon-bullet_wrench" pid="jdyd">
+			<resourcetype id="1" name="功能" />
+		</resource>
+		<resource id="ydck" name="查看预订" url="/base/booking!getById" description="查看房间" seq="4" iconCls="ext-icon-bullet_wrench" pid="jdyd">
+			<resourcetype id="1" name="功能" />
+		</resource>
+		<!-- 酒店入住 -->
 		<resource id="jdrz" name="酒店入住" url="/admin/adminIndex.jsp" description="针对EasyUI二次开发的DEMO" seq="1" iconCls="ext-icon-award_star_bronze_1" pid="jddf">
 			<resourcetype id="0" name="菜单" />
 		</resource>
@@ -207,6 +223,9 @@
 			<!-- 酒店订房 -->
 			<resource id="jddf" name="酒店订房" />
 			<resource id="jdyd" name="酒店预订" />
+			<resource id="ydlb" name="预订列表" />
+			<resource id="ydck" name="查看预订" />
+			
 			<resource id="jdrz" name="酒店入住" />
 
 			<!-- 房间管理 -->
@@ -355,13 +374,13 @@
 
 	<!-- 房间 -->
 	<rooms name="房间 ">
-		<room id="0" roomName="nill" roomProperty="1" roomStatus="0" />
-		<room id="1" roomName="jack" roomProperty="1" roomStatus="1" />
-		<room id="2" roomName="lml" roomProperty="1" roomStatus="2" />
-		<room id="3" roomName="doudou" roomProperty="0" roomStatus="3" />
-		<room id="4" roomName="erdou" roomProperty="0" roomStatus="1" />
-		<room id="5" roomName="sadou" roomProperty="0" roomStatus="0" />
-		<room id="6" roomName="sidou" roomProperty="0" roomStatus="0" />
+		<room id="0" roomName="nill" roomProperty="1" roomStatus="0" roomPrice="888" canCancel="0"/>
+		<room id="1" roomName="jack" roomProperty="1" roomStatus="1" roomPrice="201" canCancel="1"/>
+		<room id="2" roomName="lml" roomProperty="1" roomStatus="2" roomPrice="178" canCancel="0"/>
+		<room id="3" roomName="标准房间" roomProperty="0" roomStatus="3" roomPrice="144" canCancel="0"/>
+		<room id="4" roomName="erdou" roomProperty="0" roomStatus="1" roomPrice="124" canCancel="1"/>
+		<room id="5" roomName="不含早" roomProperty="0" roomStatus="0" roomPrice="114" canCancel="0"/>
+		<room id="6" roomName="sidou" roomProperty="0" roomStatus="0" roomPrice="141" canCancel="1"/>
 	</rooms>
 
 </data>

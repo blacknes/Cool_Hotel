@@ -18,6 +18,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 @Action
 public class InitAction extends BaseAction{
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	
 	@Autowired
 	private InitServiceI service;
 

@@ -293,6 +293,8 @@ public class InitServiceImpl implements InitServiceI {
 			room.setRoomName(node.valueOf("@roomName"));
 			room.setRoomProperty(node.valueOf("@roomProperty"));
 			room.setRoomStatus(node.valueOf("@roomStatus"));
+			room.setCanCancel(node.valueOf("@canCancel"));
+			room.setRoomPrice(node.valueOf("@roomPrice"));
 
 			logger.info(JSON.toJSONStringWithDateFormat(room, "yyyy-MM-dd HH:mm:ss"));
 			List<Troom> ul = baseDao.find("from Troom r where r.roomName = '" + room.getRoomName() + "' and r.id != '" + room.getId() + "'");
