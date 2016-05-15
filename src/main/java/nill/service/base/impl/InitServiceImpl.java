@@ -4,6 +4,7 @@ import java.util.HashSet;
 import java.util.List;
 
 import nill.dao.base.BaseDaoI;
+import nill.model.Tintake;
 import nill.model.Torganization;
 import nill.model.Tresource;
 import nill.model.Tresourcetype;
@@ -58,6 +59,8 @@ public class InitServiceImpl implements InitServiceI {
 			initUserOrganization(document);// 初始化用户和机构的关系
 			
 			initRoom(document);
+			
+			initIntake(document); // 初始化入住信息
 			
 		} catch (DocumentException e) {
 			// TODO Auto-generated catch block
@@ -302,6 +305,30 @@ public class InitServiceImpl implements InitServiceI {
 				baseDao.delete(r);
 			}
 			baseDao.saveOrUpdate(room);
+		}
+	}
+	
+	private void initIntake(Document document){
+		List<Node> childNodes = document.selectNodes("//intakes/intake");
+		for (Node node : childNodes) {
+			Tintake intake = (Tintake) baseDao.getById(Tintake.class, node.valueOf("@id"));
+			if (intake == null) {
+				intake = new Tintake();
+			}
+			intake.setId(node.valueOf("@id"));
+			intake.setName(node.valueOf("@name"));
+			intake.setPhone(node.valueOf("@phone"));
+			intake.setEmail(node.valueOf("@email"));
+			intake.setInDate(node.valueOf("@inDate"));
+			intake.setOutDate(node.valueOf("@outDate"));
+			intake.setRoomCount(Integer.parseInt(node.valueOf("@roomCount")));
+
+			logger.info(JSON.toJSONStringWithDateFormat(intake, "yyyy-MM-dd HH:mm:ss"));
+			List<Tintake> ul = baseDao.find("from Tintake r where r.name = '" + intake.getName() + "' and r.id != '" + intake.getId() + "'");
+			for (Tintake r : ul) {
+				baseDao.delete(r);
+			}
+			baseDao.saveOrUpdate(intake);
 		}
 	}
 

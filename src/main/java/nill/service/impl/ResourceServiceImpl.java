@@ -81,13 +81,13 @@ public class ResourceServiceImpl extends BaseServiceImpl<Tresource>  implements 
 	}
 
 	@Override
-	public void updateResource(Tresource Tresource) {
-		if (!StringUtils.isBlank(Tresource.getId())) {
-			Tresource t = getById(Tresource.getId());
+	public void updateResource(Tresource tresource) {
+		if (!StringUtils.isBlank(tresource.getId())) {
+			Tresource t = getById(tresource.getId());
 			Tresource oldParent = t.getTresource();
-			BeanUtils.copyNotNullProperties(Tresource, t, new String[] { "createdatetime" });
-			if (Tresource.getTresource() != null) {// 说明要修改的节点选中了上级节点
-				Tresource pt = getById(Tresource.getTresource().getId());// 上级节点
+			BeanUtils.copyNotNullProperties(tresource, t, new String[] { "createdatetime" });
+			if (tresource.getTresource() != null) {// 说明要修改的节点选中了上级节点
+				Tresource pt = getById(tresource.getTresource().getId());// 上级节点
 				isParentToChild(t, pt, oldParent);// 说明要将当前节点修改到当前节点的子或者孙子下
 				t.setTresource(pt);
 			} else {
@@ -124,8 +124,8 @@ public class ResourceServiceImpl extends BaseServiceImpl<Tresource>  implements 
 	 * 由于新添加的资源，当前用户的角色或者机构并没有访问此资源的权限，所以这个地方重写save方法，将新添加的资源放到用户的第一个角色里面或者第一个机构里面
 	 */
 	@Override
-	public void saveResource(Tresource Tresource, String userId) {
-		save(Tresource);
+	public void saveResource(Tresource tresource, String userId) {
+		save(tresource);
 
 		Tuser user = userDao.getById(Tuser.class, userId);
 		Set<Trole> roles = user.getTroles();
@@ -144,7 +144,7 @@ public class ResourceServiceImpl extends BaseServiceImpl<Tresource>  implements 
 					return 0;
 				}
 			});
-			l.get(0).getTresources().add(Tresource);
+			l.get(0).getTresources().add(tresource);
 		} else {// 如果用户没有角色
 			Set<Torganization> organizations = user.getTorganizations();
 			if (organizations != null && !organizations.isEmpty()) {// 如果用户没有角色，但是有机构，那就将新资源放到第一个机构里面
@@ -162,7 +162,7 @@ public class ResourceServiceImpl extends BaseServiceImpl<Tresource>  implements 
 						return 0;
 					}
 				});
-				l.get(0).getTresources().add(Tresource);
+				l.get(0).getTresources().add(tresource);
 			}
 		}
 	}

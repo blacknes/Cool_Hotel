@@ -22,7 +22,7 @@
 
 <script type="text/javascript" src="jslib/jquery-easyui-1.4.4/jquery.min.js"></script>
 <link rel="stylesheet" type="text/css" href="CSS/login1.css"">
-
+<link rel="stylesheet" type="text/css" href="jslib/bootstrap/css/style.css">
 <script type="text/javascript">
 	$(document).ready(function() {
 		$("#login").click(function() {

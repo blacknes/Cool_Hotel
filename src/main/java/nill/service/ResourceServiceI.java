@@ -25,16 +25,16 @@ public interface ResourceServiceI extends BaseServiceI<Tresource> {
 	/**
 	 * 更新资源
 	 */
-	public void updateResource(Tresource syresource);
+	public void updateResource(Tresource tresource);
 
 	/**
 	 * 保存一个资源
 	 * 
-	 * @param syresource
+	 * @param tresource
 	 * @param userId
 	 * @return
 	 */
-	public void saveResource(Tresource syresource, String userId);
+	public void saveResource(Tresource tresource, String userId);
 
 	/**
 	 * 查找符合条件的资源

@@ -37,7 +37,7 @@ public interface RoleServiceI extends BaseServiceI<Trole> {
 	 * @param data
 	 * @param userId
 	 */
-	public void saveRole(Trole syrole, String userId);
+	public void saveRole(Trole trole, String userId);
 
 	/**
 	 * 为角色授权

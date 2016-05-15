@@ -17,7 +17,7 @@ public class RresourcetypeServiceImpl extends BaseServiceImpl<Tresourcetype> imp
 	 * 
 	 * 在ehcache.xml里面需要有对应的value
 	 * 
-	 * <cache name="SyresourcetypeServiceCache"
+	 * <cache name="TresourcetypeServiceCache"
 	 * 
 	 * key是自己设定的一个ID，用来标识缓存
 	 */

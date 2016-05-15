@@ -6,7 +6,7 @@
 <html>
 <head>
 <title></title>
-<jsp:include page="../inc.jsp"></jsp:include>
+<jsp:include page="../incHeadFile.jsp"></jsp:include>
 <script type="text/javascript">
 	var selectIcon = function($dialog, $input) {
 		$input.val($(':radio:checked').val()).attr('class', $(':radio:checked').val());
